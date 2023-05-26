@@ -1,15 +1,35 @@
+import sys, os
+sys.path.append(os.path.join(os.path.dirname(sys.path[0]),''))
+from SubtitleParser.Configurations.Punctuations import allPuncts
+
 # Function that Gets Alignment groups in order.
 def GetAlignmentOrders(
         sourceToTarget:list[list[list[int]]],
         targetToOriginal:list[list[list[int]]],
+        targetRanges:list[list[int]],
+        targetTokens
     ):
-    order = []
+    order: list[list[list[int]]] = []
     for x in range(len(sourceToTarget)):
         if len(order) == 0:
             order.append([sourceToTarget[x][0].copy(),targetToOriginal[x][0].copy()])
         else:
             order.append([sourceToTarget[x][0].copy(),targetToOriginal[x][0].copy()])
-    return order
+    result = []
+    offset = list(targetTokens.keys())[0]
+    for group in order:
+        if len(result) == 0:
+            result.append(group.copy())
+        else:
+            token = group[1][0]
+            first = token - offset
+            last = result[-1][1][-1] - offset
+            if targetRanges[last][1] == targetRanges[first][0] and targetTokens[token] in allPuncts:
+                result[-1][0].extend(group[0].copy())
+                result[-1][1].extend(group[1].copy())
+            else:
+                result.append(group.copy())
+    return result
 
 def GetCopyOfDictionary(dictionary:dict):
     newDict = {}
@@ -158,7 +178,7 @@ def GetAlignment(MT,offsetSource=0,offsetTarget=0,startSource=0,startTarget=0):
     sourceAlignmentGroups = GetAlignmentGroups(sourceAlignments,targetAlignments,offsetSource)
     targetAlignmentGroups = GetAlignmentGroups(targetAlignments,sourceAlignments,offsetTarget)
 
-    groupAlignmentOrder = GetAlignmentOrders(sourceAlignmentGroups,targetAlignmentGroups)
+    groupAlignmentOrder = GetAlignmentOrders(sourceAlignmentGroups,targetAlignmentGroups,targetWordRanges,MT['targetTokens'])
     
     result = {
         'sourceAlignments':sourceAlignments,

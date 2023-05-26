@@ -1,10 +1,13 @@
 from html.parser import HTMLParser
-from Configurations.Punctuations import wrappingSymbols, endings
-from Configurations.Tags import *
 import stanza
 from srt import make_legal_content
 import re
-from CustomStanzaTokenizer import CustomTokenizer
+
+import sys, os
+sys.path.append(os.path.join(os.path.dirname(sys.path[0]),''))
+from SubtitleParser.CustomTokenizer import CustomTokenizer
+from SubtitleParser.Configurations.Punctuations import wrappingSymbols, endings
+from SubtitleParser.Configurations.Tags import *
 
 class TaggedToken():
     """
@@ -278,15 +281,8 @@ def GoThroughTree(tree,id,tokenIds):
 # Test Field
 if __name__ == "__main__":
     nlp = stanza.Pipeline(lang='en', processors='tokenize,pos,lemma,depparse', use_gpu=True)
-    text = 'This is a sentence that ends with an ellipse…'
-    test1 = TaggedTextTokenizer(text,nlp,True)
-
-    doc = nlp(text)
-    result = []
-    for sentence in doc.sentences:
-        for word in sentence.words:
-            result.append(word.text)
-    print(result)
+    text = '- [Dusty] Oh.\n- [cries]'
+    test1 = TaggedTextTokenizer(text,nlp,False)
 
     result = []
     for word in test1.tokens:

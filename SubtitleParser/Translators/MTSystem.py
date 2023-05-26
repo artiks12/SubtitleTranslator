@@ -1,15 +1,27 @@
-from CustomWordAligner import GetCustomAlignments
+import sys, os
+sys.path.append(os.path.join(os.path.dirname(sys.path[-1]),''))
+from SubtitleParser.CustomWordAligner import GetCustomAlignments
+from SubtitleParser.CustomTokenizer import CustomTokenizer
 
 class MTSystem():
     def __init__(
         self,
         hasAligner,
         aligner,
+        name
     ):
         self.hasAligner = hasAligner
         self.aligner = aligner
+        self.name = name
+        self.alignerName = 'SimAlign'
+        if self.hasAligner: self.alignerName = name
+            
 
     def GetTranslationMetadata(self,text,translation,SourceNLP,TargetNLP,offsetSource,offsetTarget):
+        tokenizerSource = CustomTokenizer(SourceNLP)
+        tokenizerTarget = CustomTokenizer(TargetNLP)
+        tokenizerSource.Tokenize(text,True)
+        tokenizerTarget.Tokenize(translation,True)
         textTokens = SourceNLP(text).sentences[0]
         translationTokens = TargetNLP(translation).sentences[0]
 
@@ -23,13 +35,13 @@ class MTSystem():
             'translation':translation
         }
 
-        for word in textTokens.words:
-            alignmentData['sourceTokens'][word.id-1+offsetSource] = word.text
-            alignmentData['sourceWordRanges'].append([word.start_char,word.end_char])
+        for word in tokenizerSource.tokens:
+            alignmentData['sourceTokens'][word.id+offsetSource] = word.value
+            alignmentData['sourceWordRanges'].append([word.start,word.end])
 
-        for word in translationTokens.words:
-            alignmentData['targetTokens'][word.id-1+offsetTarget] = word.text
-            alignmentData['targetWordRanges'].append([word.start_char,word.end_char])
+        for word in tokenizerTarget.tokens:
+            alignmentData['targetTokens'][word.id+offsetTarget] = word.value
+            alignmentData['targetWordRanges'].append([word.start,word.end])
 
         alignments = GetCustomAlignments(self.aligner,list(alignmentData['sourceTokens'].values()),list(alignmentData['targetTokens'].values()))
 

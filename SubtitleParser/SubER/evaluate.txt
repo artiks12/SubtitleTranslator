@@ -1,1 +1,0 @@
-suber -H C:\Users\Artis\Desktop\Subtitles\SubtitleParser\SubER\Hypotheses.srt -R C:\Users\Artis\Desktop\Subtitles\SubtitleParser\SubER\Reference.srt

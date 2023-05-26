@@ -1,4 +1,6 @@
-from Translators.MTSystem import MTSystem
+import sys, os
+sys.path.append(os.path.join(os.path.dirname(sys.path[0]),''))
+from SubtitleParser.Translators.MTSystem import MTSystem
 import requests
 
 class TildeTranslator(MTSystem):
@@ -9,7 +11,7 @@ class TildeTranslator(MTSystem):
         system_id,
         client_id,
     ) -> None:
-        super().__init__(hasAligner,aligner)
+        super().__init__(hasAligner,aligner,'tilde')
         self.system_id = system_id
         self.client_id = client_id
 
@@ -18,10 +20,10 @@ class TildeTranslator(MTSystem):
 
         if self.hasAligner:
             return self.GetTildeMetadata(data,text,offsetSource,offsetTarget,SourceNLP,TargetNLP)
-        return self.GetTranslationMetadata(text,data['translation'],SourceNLP,TargetNLP)   
+        return self.GetTranslationMetadata(text,data['translation'],SourceNLP,TargetNLP,offsetSource,offsetTarget)   
 
     def GetTranslationString(self,text):
-        return self.__apiCall(text,True)['translation']
+        return self.__apiCall(text,True)['translation'].replace('&quot;','"')
     
     def __apiCall(self,text,withTags):
         options = 'alignment,markSentences'
@@ -68,4 +70,15 @@ class TildeTranslator(MTSystem):
         sourceTokens = self.GetTokensForAlignment(text,MT['sourceWordRanges'],offsetSource)
         targetTokens = self.GetTokensForAlignment(MT['translation'],MT['targetWordRanges'],offsetTarget)
         return (sourceTokens,targetTokens)
-    
+
+
+if __name__ == "__main__":
+    from ids import system_id, client_id
+    translator = TildeTranslator(False,None,system_id,client_id)
+
+    print(translator.GetTranslationString('I want to--'))
+    print(translator.GetTranslationString('If you want to go--'))
+    print(translator.GetTranslationString('If he sees them--'))
+    print(translator.GetTranslationString('I want to')+'--')
+    print(translator.GetTranslationString('If you want to go')+'--')
+    print(translator.GetTranslationString('If he sees them')+'--')

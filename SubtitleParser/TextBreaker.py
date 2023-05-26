@@ -1,13 +1,15 @@
-from Sentences import Sentences
-from Caption import Caption
-from SubtitleElementTokenizer import SubtitleElement
-import Configurations.Constants as Constants
-import Translator
-from SentenceMetadataFunctions import SentenceMetadataFunctions
-from CustomStanzaTokenizer import CustomTokenizer
-from TaggedTextTokenizer import TaggedToken, TaggedTextTokenizer
-from SyntacticChunker import GetSyntachticChunksAsStrings
-from SubtitleGuidelineMetrics import SubtitleGuidelineMetrics
+import sys, os
+sys.path.append(os.path.join(os.path.dirname(sys.path[0]),''))
+from SubtitleParser.Sentences import Sentences
+from SubtitleParser.Caption import Caption
+from SubtitleParser.SubtitleElementTokenizer import SubtitleElement
+import SubtitleParser.Configurations.Constants as Constants
+import SubtitleParser.Translator as Translator
+from SubtitleParser.SentenceMetadataFunctions import SentenceMetadataFunctions
+from SubtitleParser.CustomTokenizer import CustomTokenizer
+from SubtitleParser.TaggedTextTokenizer import TaggedToken, TaggedTextTokenizer
+from SubtitleParser.SyntacticChunker import GetSyntachticChunksAsStrings
+from SubtitleParser.SubtitleGuidelineMetrics import SubtitleGuidelineMetrics
 import re
 import math
 
@@ -119,6 +121,7 @@ class TextBreaker():
         fullTextTagless = re.sub(r'(<.*?>|\{.*?\})','',fullText)
 
         if len(fullTextTagless) <= self.guidelines.symbols or caption.IsSubCaption: return left + middle + right
+        elif len(chunks) == 1: return chunks[0]
         else:
             line1 = ''
             line2 = ''
@@ -159,14 +162,14 @@ class TextBreaker():
         for chunk in chunks:
             next = lines + chunk
             nextTagless = re.sub(r'(<.*?>|\{.*?\})','',next)
-            if captionId == len(lengthsTarget):
+            if captionId+1 == len(lengthsTarget):
                 lines = next
             elif len(nextTagless) <= lengthsTarget[captionId]:
                 lines = next
             else:
                 before = lengthsTarget[captionId] - len(tagless)
                 after = len(nextTagless) - lengthsTarget[captionId]
-                if before > after: 
+                if before > after or len(lines) == 0: 
                     lines = next
                 else:
                     result[captionId] = lines
@@ -204,6 +207,8 @@ class TextBreaker():
                     spaces = ' ' * (next-last)
                     right = spaces + right
 
+            # print(left,texts[t],right)
+
             result[t] = self.GetTextLinesForSubtitle(left,texts[t],right,taggedTokenizer,caption,hasSpaces)
 
         return result
@@ -211,6 +216,7 @@ class TextBreaker():
     def GetTextForCaptionEnd(self,parts,translator):
         result = ''
         effect = ''
+        spaces = ''
         isEffect = False
         for s in range(len(parts)):
             value = parts[s].value

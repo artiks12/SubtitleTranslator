@@ -1,0 +1,80 @@
+﻿City.on.Fire.S01E03.1080p.WEB.H264-GGWP.
+ReadingSpeedScores:
+	bothFollow:352,
+	sourceFollows:39,
+	targetFollows:88,
+	neitherFollows:201,
+SymbolCountScores:
+	bothFollow:520,
+	sourceFollows:47,
+	targetFollows:76,
+	neitherFollows:37,
+TotalCompliance:
+	bothFollow:295,
+	sourceFollows:47,
+	targetFollows:109,
+	neitherFollows:229,
+Schmigadoon.S02E06.720p.WEBRip.2CH.x265.HEVC-PSA.English [SDH].ENG.
+ReadingSpeedScores:
+	bothFollow:314,
+	sourceFollows:23,
+	targetFollows:29,
+	neitherFollows:114,
+SymbolCountScores:
+	bothFollow:390,
+	sourceFollows:33,
+	targetFollows:29,
+	neitherFollows:28,
+TotalCompliance:
+	bothFollow:271,
+	sourceFollows:41,
+	targetFollows:44,
+	neitherFollows:124,
+silo.s01e03.720p.web.h264-ggez.English [SDH].ENG.
+ReadingSpeedScores:
+	bothFollow:417,
+	sourceFollows:47,
+	targetFollows:92,
+	neitherFollows:258,
+SymbolCountScores:
+	bothFollow:641,
+	sourceFollows:54,
+	targetFollows:58,
+	neitherFollows:61,
+TotalCompliance:
+	bothFollow:367,
+	sourceFollows:54,
+	targetFollows:103,
+	neitherFollows:290,
+Ted.Lasso.S03E08.720p.10bit.WEBRip.2CH.x265.HEVC-PSA_ENG.
+ReadingSpeedScores:
+	bothFollow:401,
+	sourceFollows:58,
+	targetFollows:88,
+	neitherFollows:263,
+SymbolCountScores:
+	bothFollow:617,
+	sourceFollows:62,
+	targetFollows:52,
+	neitherFollows:79,
+TotalCompliance:
+	bothFollow:360,
+	sourceFollows:62,
+	targetFollows:93,
+	neitherFollows:295,
+The.Big.Door.Prize.S01E09.WEB.x264-TORRENTGALAXY.English [SDH].ENG.
+ReadingSpeedScores:
+	bothFollow:211,
+	sourceFollows:27,
+	targetFollows:65,
+	neitherFollows:226,
+SymbolCountScores:
+	bothFollow:374,
+	sourceFollows:45,
+	targetFollows:55,
+	neitherFollows:55,
+TotalCompliance:
+	bothFollow:173,
+	sourceFollows:33,
+	targetFollows:73,
+	neitherFollows:250,

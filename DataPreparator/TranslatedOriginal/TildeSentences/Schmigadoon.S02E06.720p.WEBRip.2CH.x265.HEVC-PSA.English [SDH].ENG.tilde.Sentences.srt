@@ -1,0 +1,2132 @@
+﻿1
+00:00:02,127 --> 00:00:04,546
+[“Upbeat” orķestru mūzikas atskaņošana]
+
+2
+00:00:15,557 --> 00:00:16,767
+[mūzika kropļo, turpina]
+
+3
+00:00:32,616 --> 00:00:34,618
+[durvis atveras, aizveras]
+
+4
+00:00:35,494 --> 00:00:37,329
+[soļi tuvojas]
+
+5
+00:00:46,964 --> 00:00:51,134
+[dungošana]
+
+6
+00:00:57,182 --> 00:01:02,521
+<i> Tagad esam beiguši ♪</i>
+
+7
+00:01:04,480 --> 00:01:09,736
+<i> nav iespējas izlikties ♪</i>
+
+8
+00:01:11,572 --> 00:01:18,036
+<i> es to vairs nevaru ♪</i>
+
+9
+00:01:18,662 --> 00:01:24,042
+<i>♪ Viss beidzies, viss beidzies
+un padarīts ♪</i>
+
+10
+00:01:25,961 --> 00:01:32,009
+<i> es iedevu visu, kas man bija ♪</i>
+
+11
+00:01:33,302 --> 00:01:38,265
+<i> cauri labajiem laikiem un sliktajiem ♪</i>
+
+12
+00:01:40,475 --> 00:01:46,648
+<i> Tu negribi atvadīties ♪</i>
+
+13
+00:01:47,316 --> 00:01:52,571
+<i>♪ Bet tas ir beidzies tas ir beidzies
+un darīts ♪</i>
+
+14
+00:01:53,071 --> 00:01:59,661
+<i>♪ ES zinu, ka dažreiz tas,
+kas mums bija, bija labi ♪</i>
+
+15
+00:02:00,204 --> 00:02:04,333
+<i> Dažreiz dzīve izspēlējas tieši tā, kā ♪</i>
+
+16
+00:02:04,333 --> 00:02:07,336
+- <i>, ka mums tas būtu jādara ♪</i>
+- [koris]  <i> Oo, OH, OH ♪</i>
+
+17
+00:02:07,336 --> 00:02:12,341
+<i> zvēru, ka domāju, ka tas mums var ♪</i>
+
+18
+00:02:12,341 --> 00:02:15,511
+- <i> Bet man viss ir beidzies ♪</i>
+- <i>, ka esmu beidzis ♪</i>
+
+19
+00:02:16,303 --> 00:02:20,057
+- <i>, kas tur tavu roku, hmm ♪</i>
+- <i>, kas tur roku ♪</i>
+
+20
+00:02:20,057 --> 00:02:25,312
+<i> lūdzu Dievu, ka sapratīsiet ♪</i>
+
+21
+00:02:25,312 --> 00:02:27,022
+[koris]  <i> Ooh, sapratīsi ♪</i>
+
+22
+00:02:27,022 --> 00:02:33,529
+<i> Neviens negrib stāties pretī patiesībai ♪</i>
+
+23
+00:02:34,071 --> 00:02:37,241
+– <i> Bet tas ir beidzies, tas ir beidzies ♪</i>
+- <i> pāri, pāri ♪</i>
+
+24
+00:02:37,908 --> 00:02:41,703
+- <i> tas ir beidzies, tas ir beidzies ♪</i>
+- <i> pāri, pāri ♪</i>
+
+25
+00:02:42,454 --> 00:02:46,333
+<i> un ♪</i>
+
+26
+00:02:46,333 --> 00:02:51,088
+- <i> pabeigta ♪</i>
+- <i> esam nonākuši līdz galam ♪</i>
+
+27
+00:02:51,088 --> 00:02:55,092
+- <i> Tagad esam beiguši ♪</i>
+- <i>, ka ir... ♪</i>
+
+28
+00:02:55,092 --> 00:02:58,554
+- <i> nav ne ceļa, ne ceļa, ne ceļa ♪</i>
+- <i> Nē, nē, nē ♪</i>
+
+29
+00:02:58,554 --> 00:03:02,391
+- <i> es zinu, ka mēs mēģinājām ♪</i>
+- <i> mēs mēģinājām ♪</i>
+
+30
+00:03:02,391 --> 00:03:06,019
+– <i> norijām savu lepnumu ♪</i>
+– <i> norija tavu lepnumu ♪</i>
+
+31
+00:03:06,019 --> 00:03:11,233
+- <i> Bet dziļi iekšā mēs zinām ♪</i>
+- <i>, bet dziļi iekšā ♪</i>
+
+32
+00:03:11,233 --> 00:03:14,987
+<i>, ka kaut kas ir nomiris ♪</i>
+
+33
+00:03:14,987 --> 00:03:20,325
+– <i> tas ir beidzies, tas ir beidzies, tas ir beidzies ♪</i>
+- <i> pāri, pāri, pāri ♪</i>
+
+34
+00:03:20,325 --> 00:03:23,078
+<i> tas ir beidzies ♪</i>
+
+35
+00:03:23,078 --> 00:03:28,959
+<i> un gatavs ♪</i>
+
+36
+00:03:28,959 --> 00:03:32,212
+[koris]  <i> uz priekšu un atpakaļ ♪</i>
+
+37
+00:03:32,212 --> 00:03:36,383
+<i> tas ir atkal un atkal un paveikts ♪</i>
+
+38
+00:03:36,383 --> 00:03:39,553
+- [vokalizē]
+- <i> un gatavs ♪</i>
+
+39
+00:03:39,553 --> 00:03:42,014
+<i> tas ir beidzies ♪</i>
+
+40
+00:03:42,014 --> 00:03:48,312
+<i> un gatavs ♪</i>
+
+41
+00:03:55,611 --> 00:03:57,654
+Un vajag tikai parakstīties šeit
+
+42
+00:03:58,989 --> 00:04:02,576
+un šeit, un šeit.
+
+43
+00:04:03,285 --> 00:04:06,038
+Nevis tas, ka tas ir būtiski,
+bet kas ir tas, ko parakstu?
+
+44
+00:04:06,038 --> 00:04:09,875
+Jūsu šķiršanās dokumenti,
+laulības apliecība
+
+45
+00:04:09,875 --> 00:04:11,668
+un pirmpirkuma līgums gadījumā,
+
+46
+00:04:11,668 --> 00:04:15,005
+ja jūs nenodrošināsiet
+manam klientam piemērotu vīrišķo mantinieku.
+
+47
+00:04:15,005 --> 00:04:17,298
+- Piemērots?
+- Nav ne Femmes, ne fattiecības.
+
+48
+00:04:18,550 --> 00:04:19,635
+Tas ir prātam neaptverami.
+
+49
+00:04:19,635 --> 00:04:21,428
+Kā tev ar to viss kārtībā?
+
+50
+00:04:21,428 --> 00:04:23,931
+Krats ir slepkava. Viņš tur Džošu
+par ķīlnieku.
+
+51
+00:04:23,931 --> 00:04:25,849
+Klausies mani, jaunā lēdija--
+
+52
+00:04:25,849 --> 00:04:28,519
+Un, lai tikai būtu skaidrs, mēs būtībā
+esam viens un tas pats vecums.
+
+53
+00:04:28,519 --> 00:04:31,313
+Kad kļuvu par juristu, devu zvērestu.
+
+54
+00:04:31,313 --> 00:04:33,649
+Zvērestu, ko sauc par advokāta
+un klienta privilēģiju.
+
+55
+00:04:33,649 --> 00:04:35,609
+Tas nozīmē, ka, ja man kāds iedod
+naudu,
+
+56
+00:04:35,609 --> 00:04:38,362
+vienalga, ko viņš ir izdarījis
+vai varbūt izdarīs vienu dienu.
+
+57
+00:04:39,071 --> 00:04:41,365
+Bobij, kā klājas?
+
+58
+00:04:41,365 --> 00:04:44,368
+Labi, Krata kungs. Viss ir parakstīts
+un juridiski saistošs.
+
+59
+00:04:44,368 --> 00:04:47,287
+[Krats] Brīnišķīgi. Tu zini, kā
+es jūtos pret likumu.
+
+60
+00:04:47,287 --> 00:04:49,289
+Ka tā eksistē, lai aizsargātu tevi
+un tikai tevi.
+
+61
+00:04:49,289 --> 00:04:50,874
+[Krats] Tieši tā.
+
+62
+00:04:51,500 --> 00:04:53,585
+Paldies, Bobij. Jūs varat doties
+prom.
+
+63
+00:04:53,585 --> 00:04:54,878
+Desmit dolāru?
+
+64
+00:04:55,629 --> 00:04:58,173
+Meitene, esiet korumpēta, bet esiet
+lepna.
+
+65
+00:05:00,467 --> 00:05:01,760
+Labdien, mans mīļais. Kā tev klājas?
+
+66
+00:05:01,760 --> 00:05:05,264
+- Ja godīgi, tad ne lieliski.
+- Kāzu dienas džiteri.
+
+67
+00:05:05,764 --> 00:05:08,892
+Neuztraucies. Tā kleita, pieceļoties,
+izskatīsies daudz labāk.
+
+68
+00:05:08,892 --> 00:05:11,103
+Kur ir Džošs? Ja tu viņam nodarītu
+pāri--
+
+69
+00:05:11,103 --> 00:05:13,188
+Skinera kungs paliks neskarts,
+
+70
+00:05:13,188 --> 00:05:15,524
+kamēr jūs darīsiet visu,
+kas jums ir prasīts.
+
+71
+00:05:15,524 --> 00:05:20,821
+Kad būsim pasludināts vīrs un sieva,
+viņu atbrīvos, un tad...
+
+72
+00:05:20,821 --> 00:05:22,030
+[sākas mūzika]
+
+73
+00:05:22,614 --> 00:05:26,034
+AK, nē, nē, nē! AK, neuzdrošinies
+man dziedāt, tu sicko!
+
+74
+00:05:26,034 --> 00:05:28,704
+Izslēdzu sapņu baletu! ES
+to izslēgšu!
+
+75
+00:05:28,704 --> 00:05:30,998
+- Apturiet mūziku! Apstājies!
+- [mūzika apstājas]
+
+76
+00:05:30,998 --> 00:05:32,791
+Gribu tikai to, ka kāds mani mīl.
+
+77
+00:05:32,791 --> 00:05:34,501
+Jā, esmu pārliecināts, ka tā ir.
+
+78
+00:05:35,085 --> 00:05:37,296
+Bet diemžēl, ka kāds neesmu es.
+
+79
+00:05:37,796 --> 00:05:40,424
+Mana sirds pieder Džošam,
+un tā vienmēr
+
+80
+00:05:40,424 --> 00:05:43,093
+būs, un neko nevar darīt,
+lai to mainītu.
+
+81
+00:05:44,344 --> 00:05:47,472
+Kāzas ir pēc vienas stundas.
+Tiekamies pie altāra.
+
+82
+00:05:48,140 --> 00:05:49,558
+Frau.
+
+83
+00:05:50,976 --> 00:05:52,978
+[zīmogotāji] Lūdzu, palīdziet man.
+Lūdzu.
+
+84
+00:05:52,978 --> 00:05:55,480
+Tu esi labāks par šo. Tev jābūt,
+vai ne?
+
+85
+00:05:56,440 --> 00:06:00,319
+Varbūt kādreiz biju, bet tas bija
+sen.
+
+86
+00:06:00,319 --> 00:06:02,571
+ES darīju to, kas man bija jādara,
+lai izdzīvotu.
+
+87
+00:06:02,571 --> 00:06:04,448
+Iesaku darīt tāpat.
+
+88
+00:06:05,032 --> 00:06:07,784
+Krata kungs ir
+bagātākais vīrs Šmikago.
+
+89
+00:06:08,744 --> 00:06:11,955
+Būsi komfortabls, parūpēsies.
+
+90
+00:06:12,789 --> 00:06:15,792
+Un šādā vietā tas nav nekas.
+
+91
+00:06:20,547 --> 00:06:24,092
+Tātad, redziet... [čakarē]...
+mēs patiesībā pat negribējām šeit būt.
+
+92
+00:06:24,092 --> 00:06:26,303
+Mēs tikai mēģinājām atgriezties
+Šmigadūnā.
+
+93
+00:06:26,303 --> 00:06:28,847
+Tas ir savā ziņā jocīgi,
+ja tā padomā.
+
+94
+00:06:28,847 --> 00:06:31,683
+- [smiekli] Lūdzu, laid mani vaļā.
+- Piedod, draudziņ.
+
+95
+00:06:31,683 --> 00:06:33,602
+Tu baudīji savu brīvību,
+kamēr tev tā bija.
+
+96
+00:06:34,102 --> 00:06:36,230
+Tagad ir pienācis laiks maksāt
+savas nodevas tāpat kā mums pārējiem.
+
+97
+00:06:36,230 --> 00:06:38,774
+- Tāpat kā pārējie?
+- Tādiem kā tev paveicas.
+
+98
+00:06:39,274 --> 00:06:42,819
+Jūs un jūsu hipiju draugi dzīvojat,
+cik gribat,
+
+99
+00:06:43,362 --> 00:06:45,906
+kamēr tādi spraugas kā es iestrēgst,
+darot visus darbus.
+
+100
+00:06:45,906 --> 00:06:49,284
+Kas tev traucē dzīvot vēlamo dzīvi?
+
+101
+00:06:50,160 --> 00:06:51,745
+[tālruņa zvans]
+
+102
+00:06:57,042 --> 00:06:58,752
+Labdien! Tēvocis Oktaviuss.
+
+103
+00:06:58,752 --> 00:07:00,504
+[Krats]
+<i>Ir notikusi neliela
+plānu maiņa.</i>
+
+104
+00:07:00,504 --> 00:07:03,298
+Pēc kāzām vajag nogalināt
+Skinera kungu.
+
+105
+00:07:07,719 --> 00:07:09,471
+Bet man likās, ka plāns ir
+viņu atbrīvot.
+
+106
+00:07:09,471 --> 00:07:10,556
+<i>Plāni mainās.</i>
+
+107
+00:07:10,556 --> 00:07:11,807
+Vajag viņu nogalināt.
+
+108
+00:07:12,432 --> 00:07:15,185
+Tas manai jaunajai līgavai atvieglos
+turpmāko dzīvi.
+
+109
+00:07:15,185 --> 00:07:20,941
+Labi. Bet, ja es to izdarīšu, vai es beidzot dabūšu
+savu darbību klubā, kā jūs solījāt?
+
+110
+00:07:20,941 --> 00:07:23,652
+ES... nezinu, vai jūs redzējāt
+manu jaunāko priekšlikumu, bet--
+
+111
+00:07:23,652 --> 00:07:26,071
+Nogalini viņu.
+
+112
+00:07:27,281 --> 00:07:28,782
+[līnija tiek atvienota]
+
+113
+00:07:36,164 --> 00:07:37,165
+Par ko tas bija?
+
+114
+00:07:38,792 --> 00:07:39,877
+Nepareizs numurs.
+
+115
+00:07:40,627 --> 00:07:42,588
+Tu burtiski teici:
+“Tēvocis Oktaviuss.”
+
+116
+00:07:45,007 --> 00:07:46,550
+Tātad tagad
+tu mani vienkārši nogalināsi?
+
+117
+00:07:46,550 --> 00:07:48,886
+Esmu pārliecināts, ka tavā darbā ir
+lietas, kas tev nepatīk.
+
+118
+00:07:48,886 --> 00:07:50,387
+Nedari to.
+
+119
+00:07:51,388 --> 00:07:52,431
+Tas nav tā vērts.
+
+120
+00:07:52,431 --> 00:07:55,184
+- Tēvocis Oktaviuss padarīs to vērtu.
+- Kā tu to zini?
+
+121
+00:07:55,184 --> 00:08:00,439
+Jo viņš man sola pēdējos 36 gadus. Tā
+tas ir.
+
+122
+00:08:01,857 --> 00:08:06,612
+S -- vai esi kādreiz dzirdējis
+par uzticīgā kalpa līdzību?
+
+123
+00:08:06,612 --> 00:08:07,946
+- Ko?
+- Mmm.
+
+124
+00:08:08,989 --> 00:08:11,116
+Kādreiz bija uzticīgs kalps,
+
+125
+00:08:12,868 --> 00:08:15,829
+kurš kalpoja nežēlīgam saimniekam.
+
+126
+00:08:15,829 --> 00:08:21,293
+Saimnieks nemitīgi palūdza kalpam
+darīt viņa vietā
+
+127
+00:08:21,835 --> 00:08:26,340
+lietas, ko kalps zināja savā sirdī, -
+kļūdījās.
+
+128
+00:08:27,090 --> 00:08:29,384
+Bet viņš tos izdarīja,
+jo bija apsolīts,
+
+129
+00:08:29,384 --> 00:08:33,679
+ka mirstot pārmantos
+visas saimnieka bagātības.
+
+130
+00:08:34,515 --> 00:08:37,183
+Taču, kad saimnieks beidzot nomira,
+kalps atklāja,
+
+131
+00:08:37,183 --> 00:08:42,105
+ka visu atstāj jaunajai
+pilnīgi vecumam nepiemērotajai sievai.
+
+132
+00:08:43,398 --> 00:08:49,029
+Un kalps nonāca tikai
+pie saviem izjukušajiem sapņiem.
+
+133
+00:08:51,323 --> 00:08:52,324
+Beigas.
+
+134
+00:08:54,701 --> 00:08:55,786
+[ņurd]
+
+135
+00:08:55,786 --> 00:08:57,538
+[smiekli]
+
+136
+00:08:57,538 --> 00:09:00,082
+ES redzu, ko tu centies darīt,
+un tas nedarbosies.
+
+137
+00:09:00,082 --> 00:09:02,793
+Turklāt man ir par vēlu.
+
+138
+00:09:02,793 --> 00:09:05,337
+Nekad nav par vēlu sekot
+saviem sapņiem, vecīt.
+
+139
+00:09:07,339 --> 00:09:12,594
+Vai esi dzirdējis līdzīgo puisi,
+kurš palīdzēja
+
+140
+00:09:12,594 --> 00:09:14,638
+otram puisim, un tas abiem izdevās?
+
+141
+00:09:16,390 --> 00:09:18,976
+Bruģis, bruģis, bruģis. Piepildi
+tos audzējus.
+
+142
+00:09:19,977 --> 00:09:21,812
+[elpas] Blata kungs,
+ko jūs man esat--
+
+143
+00:09:21,812 --> 00:09:24,064
+vajadzīgs bārenis! Tagad!
+
+144
+00:09:24,064 --> 00:09:26,275
+- [bāreņi] Izvēlies mani Izvēlies mani
+- [švaki]
+
+145
+00:09:26,942 --> 00:09:28,694
+- Bet plāns.
+- Plāns neizdevās.
+
+146
+00:09:29,820 --> 00:09:32,781
+Tas velns Krats atkal ir izvairījies
+no mana tvēriena.
+
+147
+00:09:32,781 --> 00:09:34,408
+Žēlsirdība, kas notika?
+
+148
+00:09:34,408 --> 00:09:36,243
+Kas notika? Viņš ir dzīvs.
+
+149
+00:09:37,369 --> 00:09:38,829
+Mana Deizija ir mirusi.
+
+150
+00:09:38,829 --> 00:09:41,874
+Asmens prasa asinis.
+
+151
+00:09:41,874 --> 00:09:43,625
+Kurš pirmais grib braukt?
+
+152
+00:09:43,625 --> 00:09:45,460
+Tagad, tagad. Nesteigsimies te.
+
+153
+00:09:45,460 --> 00:09:47,462
+- Gaidīsim līdz--
+- Vairs negaida!
+
+154
+00:09:47,963 --> 00:09:50,716
+Jūs apgalvojat, ka esat veltīta man,
+mis Kodvela.
+
+155
+00:09:51,300 --> 00:09:53,343
+Nu, tagad ir īstais laiks
+to pierādīt.
+
+156
+00:10:08,358 --> 00:10:09,401
+AK Dievs, tas bija labi.
+
+157
+00:10:09,902 --> 00:10:10,986
+Nāc man līdzi.
+
+158
+00:10:11,612 --> 00:10:14,698
+NAP laiks! Visiem vajag miegu! Tagad!
+
+159
+00:10:14,698 --> 00:10:15,782
+Dari, kā tev saka.
+
+160
+00:10:23,081 --> 00:10:24,374
+[elpas]
+
+161
+00:10:27,669 --> 00:10:28,754
+[uzmavas]
+
+162
+00:10:35,260 --> 00:10:37,596
+- [Kodvela nopūta]
+- Mmm.
+
+163
+00:10:38,263 --> 00:10:39,389
+- [smiekli]
+- [smiekli]
+
+164
+00:10:40,974 --> 00:10:41,975
+[klauvējiens pie durvīm]
+
+165
+00:10:41,975 --> 00:10:43,685
+Ko tu gribi?
+
+166
+00:10:43,685 --> 00:10:46,230
+- Vai viss kārtībā?
+- Mēs dzirdējām kliedzienus.
+
+167
+00:10:46,230 --> 00:10:47,481
+Vai tas cilvēks tev nodarīja pāri?
+
+168
+00:10:47,481 --> 00:10:48,774
+Vai jums draud briesmas?
+
+169
+00:10:48,774 --> 00:10:50,234
+Kāpēc tu viņu nosauci par tēti?
+
+170
+00:10:50,734 --> 00:10:51,944
+[smiekli]
+
+171
+00:10:51,944 --> 00:10:54,238
+Nē, viss kārtībā. Mums viss kārtībā.
+
+172
+00:10:54,238 --> 00:10:58,033
+Dodieties atpakaļ uz savām istabām.
+Nevienam briesmas nedraud.
+
+173
+00:11:00,118 --> 00:11:01,662
+Patiesībā tā gluži nav taisnība,
+mans mīļais.
+
+174
+00:11:03,080 --> 00:11:06,500
+Vakar es redzēju, kā misters Skinners
+šāvienpunktā saņēma
+
+175
+00:11:06,500 --> 00:11:08,961
+to greizo policistu Riveru.
+
+176
+00:11:08,961 --> 00:11:11,296
+- [elpas]
+- Un es neko nedarīju.
+
+177
+00:11:11,296 --> 00:11:12,589
+Mums viņam jāpalīdz.
+
+178
+00:11:12,589 --> 00:11:14,842
+Kā mēs varam viņam palīdzēt?
+Mēs pat nezinām, kur viņš atrodas.
+
+179
+00:11:14,842 --> 00:11:16,468
+[vaidi] ES noteikti varu minēt.
+
+180
+00:11:17,594 --> 00:11:22,599
+Tajā pašā vietā, kur pirms 20 gadiem
+mani nopratināja Rivera.
+
+181
+00:11:24,142 --> 00:11:26,103
+Kratas spēkstacijas pagrabs.
+
+182
+00:11:27,187 --> 00:11:29,898
+Iespējams, tu vēl kādu nogalināsi.
+
+183
+00:11:29,898 --> 00:11:31,441
+Nu, ja providence ir laipna.
+
+184
+00:11:31,441 --> 00:11:32,860
+[smiekli, sprauslas]
+
+185
+00:11:33,986 --> 00:11:36,238
+- Tas bija apbrīnojami.
+- [nopūšas]
+
+186
+00:11:37,781 --> 00:11:39,283
+Jūs zināt... [nopūšas]
+
+187
+00:11:41,451 --> 00:11:45,789
+Uz vienu reizi ir tik jauki kļūt
+par skolnieku, nevis skolotāju.
+
+188
+00:11:45,789 --> 00:11:46,874
+[smiekli]
+
+189
+00:11:47,499 --> 00:11:50,169
+Vai, jūsuprāt, man ir vēl vairāk
+ko uzzināt par mīlēšanos?
+
+190
+00:11:50,669 --> 00:11:51,837
+Jā, noteikti.
+
+191
+00:11:53,630 --> 00:11:54,631
+Tas bija lieliski.
+
+192
+00:11:55,215 --> 00:11:59,720
+Bet, ziniet, pat...
+pat Pikaso turpināja mācīties.
+
+193
+00:11:59,720 --> 00:12:02,723
+Ziniet, vienmēr ir, uh,
+vairāk jāmācās.
+
+194
+00:12:04,016 --> 00:12:05,517
+- Lieliski. [smiekli]
+- [smiekli]
+
+195
+00:12:06,018 --> 00:12:06,852
+[klauvējiens pie durvīm]
+
+196
+00:12:07,477 --> 00:12:09,146
+- Ej prom!
+- Nāc.
+
+197
+00:12:09,897 --> 00:12:10,731
+[nopūšas]
+
+198
+00:12:11,982 --> 00:12:14,610
+Nu ko. Tu vismaz vēl arvien kļūsti
+kails.
+
+199
+00:12:14,610 --> 00:12:15,694
+Ko tu gribi?
+
+200
+00:12:15,694 --> 00:12:18,822
+Vai tev nevajadzētu sekot savam jaunajam
+izredzētajam vadonim Džošam?
+
+201
+00:12:18,822 --> 00:12:20,157
+Džošs iekūlies nepatikšanās.
+
+202
+00:12:20,157 --> 00:12:22,117
+Seržants Rivera aizveda viņu
+uz spēkstaciju,
+
+203
+00:12:22,117 --> 00:12:24,203
+lai viņi piespiestu Melisu
+apprecēties ar Kratu.
+
+204
+00:12:24,203 --> 00:12:26,205
+- Mēs acīmredzot nerūpējamies par Melisu,...
+- Nē.
+
+205
+00:12:26,205 --> 00:12:30,250
+...bet nezinājām, ko darīt,
+tāpēc atbraucām pie jums.
+
+206
+00:12:32,920 --> 00:12:34,087
+Džošs man nodarīja pāri.
+
+207
+00:12:35,422 --> 00:12:38,425
+Bet reizēm, kad tev iepļaukāta seja,
+
+208
+00:12:38,926 --> 00:12:42,429
+vajag pagriezt otru vaigu un ļaut
+tam cilvēkam tev atkal iecirst.
+
+209
+00:12:43,263 --> 00:12:45,682
+- Bet vai ne?
+- Jā, tas izklausās slikti.
+
+210
+00:12:45,682 --> 00:12:47,851
+- Jā, ne tas labākais piemērs, mīļā.
+- Ā.
+
+211
+00:12:47,851 --> 00:12:50,521
+Bet, lai ko viņš darītu, Džošs
+joprojām ir mūsu čoms.
+
+212
+00:12:50,521 --> 00:12:53,565
+Un, ja viņam ir vajadzīga mūsu palīdzība, tad
+mums ir jābūt tur viņam neatkarīgi no tā, kas.
+
+213
+00:12:54,358 --> 00:12:56,860
+Labāk gāzi augšā laimes autobusā.
+Tas ir ieslēgts.
+
+214
+00:12:56,860 --> 00:12:58,529
+[gavilēšana] Jā!
+
+215
+00:12:58,529 --> 00:12:59,655
+[Tofers] Rullēsim.
+
+216
+00:13:00,864 --> 00:13:05,744
+Un Slots ne tikai atbrīvojās un atriebās
+savai ļaunajai ģimenei, bet
+
+217
+00:13:06,495 --> 00:13:10,958
+arī kļuva par draugiem ar visiem Gūnijiem
+un dalījās viņu nelielajā bagātībā.
+
+218
+00:13:11,792 --> 00:13:13,544
+- Beigas.
+- [nopūšas] Labi.
+
+219
+00:13:13,544 --> 00:13:15,003
+- Kas man atgādina...
+- [bļauj]
+
+220
+00:13:15,003 --> 00:13:17,923
+...līdzīgo suni,
+kurš pārsteidzoši labi prata basketbolu.
+
+221
+00:13:17,923 --> 00:13:20,843
+Sāc vēl vienu līdzību,
+un es tevi tūlīt nogalināšu.
+
+222
+00:13:20,843 --> 00:13:22,469
+Nē, tu to nedarīsi.
+
+223
+00:13:23,679 --> 00:13:26,098
+Lai Džošs tagad iet.
+
+224
+00:13:26,098 --> 00:13:27,015
+Tofers?
+
+225
+00:13:27,015 --> 00:13:29,059
+Džošs. Man ļoti žēl, vecīt.
+
+226
+00:13:29,059 --> 00:13:30,853
+- Skābs makarons? [smiekli]
+- [smiekli]
+
+227
+00:13:30,853 --> 00:13:32,271
+ES pat nezinu, ko tas nozīmē.
+
+228
+00:13:32,271 --> 00:13:34,314
+Nekādu uztraukumu. [čakarē]
+Es tevi mīlu, vecīt.
+
+229
+00:13:34,314 --> 00:13:36,275
+- ES arī tevi mīlu, vecīt.
+- [Rivera] AK, brāli.
+
+230
+00:13:36,275 --> 00:13:40,612
+Ja tā nav mūsu staigājošo
+augļu kūku trupa, atbrauc glābt dienu.
+
+231
+00:13:41,154 --> 00:13:43,115
+Ar ko? Mīlestība?
+
+232
+00:13:44,074 --> 00:13:45,951
+Jauks mēģinājums. Man ir šis.
+
+233
+00:13:45,951 --> 00:13:47,035
+Pagaidi.
+
+234
+00:13:48,745 --> 00:13:51,206
+Mīlestība ir stiprāka
+par jebkuru ieroci.
+
+235
+00:13:51,206 --> 00:13:52,457
+Vai esat par to pārliecināts?
+
+236
+00:13:52,457 --> 00:13:54,251
+ES par to neesmu pārliecināts, nē.
+
+237
+00:13:54,251 --> 00:13:57,421
+- [atveras durvis]
+- Ne tik ātri!
+
+238
+00:13:57,421 --> 00:13:58,755
+Tieši tā, vara.
+
+239
+00:13:58,755 --> 00:14:02,593
+- Un kas tu, pie velna, esi?
+- Tu mani nepazīsti, seržant Rivera?
+
+240
+00:14:03,177 --> 00:14:04,720
+Nu, es laikam nevaru tev pārmest.
+
+241
+00:14:05,512 --> 00:14:08,724
+Pagājuši 20 gadi,
+kopš jūs mani nosūtījāt uz cietumu
+
+242
+00:14:08,724 --> 00:14:11,476
+par manas sievas Deizijas slepkavību.
+
+243
+00:14:12,477 --> 00:14:13,562
+Dūlijs blieza?
+
+244
+00:14:13,562 --> 00:14:14,646
+Miesā.
+
+245
+00:14:15,147 --> 00:14:18,150
+Un izslāpuši pēc atriebības.
+
+246
+00:14:18,692 --> 00:14:19,693
+Pagaidi.
+
+247
+00:14:21,945 --> 00:14:23,363
+Deizija bija manas mātes vārds.
+
+248
+00:14:24,948 --> 00:14:28,410
+Sveika, mana meita!
+
+249
+00:14:28,410 --> 00:14:29,494
+Nē.
+
+250
+00:14:30,162 --> 00:14:31,163
+Man nav tēva.
+
+251
+00:14:31,163 --> 00:14:35,083
+Dženija. Dženij, tici man,
+es nekad nenodarīju pāri tavai mātei.
+
+252
+00:14:35,083 --> 00:14:37,503
+ES viņu mīlēju vairāk
+nekā pati dzīve.
+
+253
+00:14:37,503 --> 00:14:40,506
+Kaut es varētu tam noticēt,
+bet es to nedaru.
+
+254
+00:14:42,257 --> 00:14:43,759
+ES gribu, lai tev nebūtu
+nekāda sakara.
+
+255
+00:14:45,469 --> 00:14:48,096
+Tad es tikpat labi varu atstāt
+šo elli uz nākamo.
+
+256
+00:14:48,096 --> 00:14:50,057
+- [Maikls, Kodvels] Nē!
+- Apstājies! Apstājies!
+
+257
+00:14:54,603 --> 00:14:55,646
+Viņš saka patiesību.
+
+258
+00:14:57,147 --> 00:14:58,190
+Un es zinu,...
+
+259
+00:15:00,150 --> 00:15:01,693
+jo esmu tas, kurš viņu ierāmēja.
+
+260
+00:15:03,403 --> 00:15:06,073
+Krats nogalināja tavu māti,
+nevis Dūliju.
+
+261
+00:15:12,704 --> 00:15:13,539
+[elpas]
+
+262
+00:15:13,539 --> 00:15:17,042
+- AK, mana Dženija, mana Dženija.
+- Tētis.
+
+263
+00:15:20,504 --> 00:15:21,713
+[Dženija šņukst]
+
+264
+00:15:22,798 --> 00:15:24,383
+- [raudas]
+- Labi.
+
+265
+00:15:25,717 --> 00:15:27,177
+Kas man grib palīdzēt pārtraukt
+kāzas?
+
+266
+00:15:27,177 --> 00:15:28,387
+- [gaviles]
+- ES gan!
+
+267
+00:15:29,388 --> 00:15:32,182
+[Diktors] Mēs šodien esam sapulcējušies
+šeit, lai pievienotos Oktaviusam
+
+268
+00:15:32,182 --> 00:15:33,642
+un Melisai svētās laulībās.
+
+269
+00:15:34,309 --> 00:15:37,229
+Vai tu, Oktavij, ņem Melisu
+par savu likumīgo kāzu sievu?
+
+270
+00:15:37,729 --> 00:15:40,357
+[vaidi]
+
+271
+00:15:41,358 --> 00:15:42,192
+ES gan.
+
+272
+00:15:42,192 --> 00:15:45,445
+Vai tu, Melisa, ņem Oktaviusu
+par savu likumīgo kāzu vīru?
+
+273
+00:15:46,446 --> 00:15:47,906
+Man nav izvēles.
+
+274
+00:15:49,074 --> 00:15:50,325
+Tas ir svarīgi!
+
+275
+00:15:50,325 --> 00:15:53,245
+Tad ar varu, ko man piešķīra
+Šmicago pilsēta,
+
+276
+00:15:53,245 --> 00:15:54,663
+es jums izsaku MA--
+
+277
+00:15:54,663 --> 00:15:56,540
+- Pārtrauciet kāzas!
+- [Melisa] Džošs!
+
+278
+00:15:56,540 --> 00:15:57,958
+Tu. Kā jūs--
+
+279
+00:15:57,958 --> 00:16:00,836
+Vajag muti aiztaisīt ciet un prom
+no manas sievas.
+
+280
+00:16:00,836 --> 00:16:03,297
+[smiekli] Apbrīnojami.
+
+281
+00:16:03,297 --> 00:16:04,464
+- Sagrābj viņu.
+- [Džošs] Ko?
+
+282
+00:16:05,215 --> 00:16:06,633
+Virsnieki, piecelieties!
+
+283
+00:16:06,633 --> 00:16:08,218
+Ko, jūsuprāt, darāt?
+
+284
+00:16:08,218 --> 00:16:10,721
+Piecelies. Uz vienu reizi.
+
+285
+00:16:11,513 --> 00:16:12,848
+Un es arī.
+
+286
+00:16:12,848 --> 00:16:14,683
+Pietiek, Oktavius!
+
+287
+00:16:15,434 --> 00:16:18,145
+Baidos, ka jūs abi esat pārspēlējuši
+savu roku.
+
+288
+00:16:18,145 --> 00:16:20,772
+Viņi tev neatbild. Viņi man atbild.
+
+289
+00:16:20,772 --> 00:16:23,025
+- [dziļi ieelpo] Aizved viņu prom. Tagad.
+- [ņurd]
+
+290
+00:16:23,692 --> 00:16:26,570
+ES tevi mīlu, Mel Un man tik ļoti žēl
+šīs visas jezgas!
+
+291
+00:16:26,570 --> 00:16:29,489
+ES arī tevi mīlu! Lai kas notiktu,
+es tevi vienmēr mīlēšu!
+
+292
+00:16:29,489 --> 00:16:32,409
+Pietiek ar šo pļurkstēšanu. Izrunā
+mums vīru un sievu.
+
+293
+00:16:33,952 --> 00:16:37,372
+Ar varu, ko man piešķīra
+Šmicago pilsēta, es tagad izsaku jums--
+
+294
+00:16:37,372 --> 00:16:39,208
+- Atriebība!
+- Dūlijs blieza?
+
+295
+00:16:39,208 --> 00:16:41,502
+- Ir mans!
+- Nē, tēti, nē!
+
+296
+00:16:46,798 --> 00:16:48,759
+[elpo, dreboši elpo]
+
+297
+00:16:50,719 --> 00:16:51,845
+[nopūšas]
+
+298
+00:16:51,845 --> 00:16:54,056
+[Krats ķiķina, dziļi ieelpo]
+
+299
+00:16:55,182 --> 00:16:57,226
+[smiekli]
+
+300
+00:16:58,143 --> 00:17:01,104
+Tu tikai turpini zaudēt, vai ne,
+bliez?
+
+301
+00:17:05,108 --> 00:17:05,983
+[viesi elsojot]
+
+302
+00:17:05,983 --> 00:17:08,319
+[Krats] Ne tik ātri, mans mīļais.
+
+303
+00:17:09,530 --> 00:17:10,614
+Pabeidz ceremoniju.
+
+304
+00:17:10,614 --> 00:17:15,577
+Krata kungs, man kā jūsu advokātam
+ir jāiesaka – pašam apsēsties.
+
+305
+00:17:16,286 --> 00:17:17,119
+Pabeidziet!
+
+306
+00:17:17,119 --> 00:17:22,166
+Labi, UM, tad ar varu,
+ko man piešķīra pilsēta Šmicago,
+
+307
+00:17:22,166 --> 00:17:23,794
+- es izsaku jums cilvēks un--
+- Paskaties uz augšu!
+
+308
+00:17:23,794 --> 00:17:25,753
+- [viesi kliedz]
+- [Džošs] Ej nost!
+
+309
+00:17:29,341 --> 00:17:30,342
+AK, sūds.
+
+310
+00:17:31,468 --> 00:17:33,136
+[kāzu viesi kliedz]
+
+311
+00:17:33,136 --> 00:17:34,221
+Ai, ai!
+
+312
+00:17:39,268 --> 00:17:41,728
+[strauji izelpo] Nopietni? Atkal?
+
+313
+00:17:42,312 --> 00:17:45,023
+Tas tiešām ir brīnišķīgs nazis.
+
+314
+00:17:45,816 --> 00:17:46,650
+[nopūšas]
+
+315
+00:17:48,318 --> 00:17:49,403
+Mana mīlestība.
+
+316
+00:17:52,531 --> 00:17:54,408
+- Vai ar tevi viss kārtībā? [nopūšas]
+- Jā, tagad esmu.
+
+317
+00:17:54,950 --> 00:17:56,451
+- ES tevi mīlu.
+- ES tevi mīlu.
+
+318
+00:17:58,579 --> 00:18:01,164
+Vai viņš ir miris?
+
+319
+00:18:09,923 --> 00:18:14,178
+<i> Viņš ir kaput ♪</i>
+
+320
+00:18:15,345 --> 00:18:16,847
+<i> Jā, viņš ir kaput ♪</i>
+
+321
+00:18:16,847 --> 00:18:18,098
+[pilsētnieku elpas]
+
+322
+00:18:18,098 --> 00:18:22,769
+<i>♪ Viņš vadīja pilsētu un turēja
+mūs lejā Tagad kurpe ir otrā kājā ♪</i>
+
+323
+00:18:22,769 --> 00:18:28,025
+<i>♪ Savrupmājās viņš dzīvoja,
+bet tagad deg ellē ♪</i>
+
+324
+00:18:28,025 --> 00:18:34,281
+<i> Mēs visi esam tik priecīgi, ka viņš ir kaput ♪</i>
+
+325
+00:18:34,281 --> 00:18:39,870
+<i> es uz to dzeršu ♪</i>
+
+326
+00:18:41,622 --> 00:18:45,959
+Tagad, kad Krata ir mirusi, Šmicago
+viss tūlīt mainīsies.
+
+327
+00:18:47,920 --> 00:18:49,505
+[Diktors]
+<i>Frau kundze pārņems klubu
+un izmantos</i>
+
+328
+00:18:49,505 --> 00:18:52,591
+<i>savu pozīciju, lai veicinātu
+aizraujošu jauno talantu.</i>
+
+329
+00:18:53,425 --> 00:18:55,010
+[publika aplaudē, gavilē]
+
+330
+00:18:55,677 --> 00:18:59,848
+<i> es uzvilkšu savus zivju tīklus ♪</i>
+
+331
+00:19:00,516 --> 00:19:05,437
+<i>♪ Un kļūsti tik slapjš, kā
+zivs iegūst Whoo ♪</i>
+
+332
+00:19:05,437 --> 00:19:08,440
+[Diktors] <i>Tāpat kā bijušais
+seržants Rivera.</i>
+
+333
+00:19:09,733 --> 00:19:12,819
+<i>Bobijs apvienosies ar cilti,
+lai sadalītu Krata monopolus,</i>
+
+334
+00:19:13,320 --> 00:19:15,280
+<i>un notiks kaut kas neticams.</i>
+
+335
+00:19:16,532 --> 00:19:18,450
+<i>Viņi visi saņem darbu!</i>
+
+336
+00:19:21,745 --> 00:19:24,790
+<i>Kamēr Tofers un Dženija
+bērnunamā atradīs ideālu mājvietu</i>
+
+337
+00:19:24,790 --> 00:19:26,458
+<i>saviem talantiem.</i>
+
+338
+00:19:29,461 --> 00:19:32,840
+<i>Tāpēc, ka mis Kodvela un Dūlijs
+kopā iesaistīsies biznesā</i>
+
+339
+00:19:34,091 --> 00:19:36,009
+<i>un izdarīs slepkavību.</i>
+
+340
+00:19:37,636 --> 00:19:41,223
+Džošam un Melisai beidzot ir
+laimīgas beigas, ko viņi ir meklējuši,
+
+341
+00:19:41,223 --> 00:19:44,685
+un viņi var brīvi pamest Šmicago
+un atgriezties savā pasaulē. [dziļi ieelpo]
+
+342
+00:19:44,685 --> 00:19:45,769
+Bet kāpēc lai viņi to darītu?
+
+343
+00:19:47,312 --> 00:19:51,066
+Kāpēc atgriezties vietā,
+kuru tik ļoti vēlējāties pamest?
+
+344
+00:19:51,066 --> 00:19:54,862
+Kur triumfē slikti cilvēki, cieš
+labi cilvēki
+
+345
+00:19:54,862 --> 00:19:57,906
+un dažiem pāriem, lai cik slikti
+viņi to vēlētos,
+
+346
+00:19:57,906 --> 00:20:00,909
+nekad nebūs bērnu?
+
+347
+00:20:02,035 --> 00:20:04,788
+[izgriezumi] Protams, tu... tu droši vien jūties
+tā, it kā būtu kaut ko iemācījies
+
+348
+00:20:04,788 --> 00:20:06,582
+savā īsajā ceļā uz šejieni.
+
+349
+00:20:06,582 --> 00:20:10,544
+Un tagad dzīve būs daudz labāka.
+Vai ne?
+
+350
+00:20:10,544 --> 00:20:14,590
+<i> Ooh ♪</i>
+
+351
+00:20:15,215 --> 00:20:18,552
+<i> Ooh ♪</i>
+
+352
+00:20:18,552 --> 00:20:21,138
+Vai, aizbraucot no Šmigadūnas,
+tā nejutāties?
+
+353
+00:20:21,138 --> 00:20:23,640
+Ka tev ir laimīgas beigas,
+
+354
+00:20:23,640 --> 00:20:26,518
+ka no šejienes viss būs kārtībā?
+
+355
+00:20:27,686 --> 00:20:29,104
+Bet tā nebija, vai ne?
+
+356
+00:20:29,104 --> 00:20:31,440
+Burvestība norima.
+
+357
+00:20:32,024 --> 00:20:36,403
+Maģija to dara vienmēr, izņemot šeit,
+Šmicago.
+
+358
+00:20:36,403 --> 00:20:40,199
+<i> paliek šeit Šmicago ♪</i>
+
+359
+00:20:40,199 --> 00:20:44,828
+<i> mūsu fantastisko farrago ♪</i>
+
+360
+00:20:44,828 --> 00:20:47,456
+- Te tu varētu būt zvaigzne.
+- Mīļots līderis.
+
+361
+00:20:47,456 --> 00:20:51,627
+Te visi tavi sapņi
+reāli var piepildīties.
+
+362
+00:20:51,627 --> 00:20:53,712
+<i>♪ Paliec šeit, paliec šeit, ♪</i>
+
+363
+00:20:53,712 --> 00:20:57,633
+<i> paliek šeit Šmicago ♪</i>
+
+364
+00:20:57,633 --> 00:21:00,511
+<i> Šmicago ♪</i>
+
+365
+00:21:00,511 --> 00:21:03,764
+Pateicoties jums,
+mums visiem šeit kļūst arvien labāk.
+
+366
+00:21:03,764 --> 00:21:06,225
+Nu nevar aizbraukt.
+Viss vienkārši kļūst labi!
+
+367
+00:21:07,142 --> 00:21:09,269
+Pieliec viņus klāt, kiddos. Papildini
+viņus.
+
+368
+00:21:09,269 --> 00:21:12,439
+<i> uzturēšanās ♪</i>
+
+369
+00:21:12,439 --> 00:21:16,276
+Kas tas būs?
+Dzīves bezprieka drudžainums tur ārā?
+
+370
+00:21:16,276 --> 00:21:19,571
+Vai arī burvība un satraukums šeit?
+
+371
+00:21:24,952 --> 00:21:26,078
+Ko tu domā?
+
+372
+00:21:27,371 --> 00:21:28,497
+Ko tu domā?
+
+373
+00:21:33,752 --> 00:21:34,753
+ES domāju...
+
+374
+00:21:35,629 --> 00:21:38,924
+<i> viss, ko viņš teica, bija taisnība ♪</i>
+
+375
+00:21:41,009 --> 00:21:46,682
+<i> nekādu garantiju man un tev nav ♪</i>
+
+376
+00:21:47,599 --> 00:21:52,646
+<i> un maģija ik pa laikam ir lieliska ♪</i>
+
+377
+00:21:53,814 --> 00:21:57,484
+<i> Bet es gribu vairāk ♪</i>
+
+378
+00:21:58,068 --> 00:21:59,194
+[Diktors] Vairāk ko?
+
+379
+00:21:59,695 --> 00:22:02,865
+Vairāk neskaidrību? Vairāk prieka?
+
+380
+00:22:02,865 --> 00:22:07,452
+<i> pasaule var būt auksta un tumša ♪</i>
+
+381
+00:22:08,745 --> 00:22:14,293
+<i> Bet, kad mēs savienojamies, tas rada dzirksteli ♪</i>
+
+382
+00:22:14,293 --> 00:22:19,381
+<i> un varbūt tā dzirkstele atkal izdzisīs ♪</i>
+
+383
+00:22:19,381 --> 00:22:25,429
+<i> Bet es gribu vairāk ♪</i>
+
+384
+00:22:25,429 --> 00:22:28,640
+Vienīgā vieta, kur tu dabūsi to,
+ko patiesībā vēlies, ir šeit.
+
+385
+00:22:28,640 --> 00:22:33,770
+<i> varu pateikt tikai to, ko jūti ♪</i>
+
+386
+00:22:33,770 --> 00:22:38,400
+<i> ir lietas, ko nevar noslēpt ♪</i>
+
+387
+00:22:39,443 --> 00:22:44,489
+<i> Dažreiz dzīve var tevi aizsūtīt spolēt ♪</i>
+
+388
+00:22:44,489 --> 00:22:46,992
+<i> Bet ko mēs gribam ♪</i>
+
+389
+00:22:46,992 --> 00:22:49,786
+<i> visu, ko vēlamies ♪</i>
+
+390
+00:22:49,786 --> 00:22:56,627
+<i> ir kaut kas īsts ♪</i>
+
+391
+00:23:07,721 --> 00:23:11,266
+[strauji ieelpo] Atvainojiet.
+Mums tevis pietrūks.
+
+392
+00:23:11,850 --> 00:23:12,851
+Jūs visi.
+
+393
+00:23:13,936 --> 00:23:15,312
+Bet mums laiks iet.
+
+394
+00:23:16,271 --> 00:23:18,065
+Vai esat pārliecināts?
+
+395
+00:23:18,065 --> 00:23:22,319
+Tā būs nepārtraukta cīņa
+ar vairāk sliktām dienām nekā labām.
+
+396
+00:23:22,319 --> 00:23:25,113
+Un ļoti laba iespēja, ka tu nonāksi
+turpat, kur biji.
+
+397
+00:23:25,989 --> 00:23:26,990
+Mēs zinām.
+
+398
+00:23:28,325 --> 00:23:31,578
+- Bet vai tad tā nav visa jēga?
+- [smiekli]
+
+399
+00:23:32,788 --> 00:23:34,456
+- [izsaucieni]
+- Ai, ai!
+
+400
+00:23:34,456 --> 00:23:38,335
+Tu to izdarīji! Tu to izdarīji! ES zināju,
+ka tu to darīsi! ES zināju, ka tas ir tevī!
+
+401
+00:23:38,335 --> 00:23:39,503
+Ko?
+
+402
+00:23:39,503 --> 00:23:43,924
+ES tik ļoti atvainojos par to visu. ES
+tiešām esmu, bet man vajadzēja tevi pārbaudīt.
+
+403
+00:23:44,424 --> 00:23:46,718
+Un pārbaudījumu izturējāt,
+vai ne!
+[smiekli]
+
+404
+00:23:46,718 --> 00:23:48,053
+[pilsētnieki ķiķina]
+
+405
+00:23:48,053 --> 00:23:50,806
+Pag, tu smaidi? Kāpēc tu smaidi?
+
+406
+00:23:50,806 --> 00:23:52,850
+- Jo viņš strādā manā labā.
+- [Džošs] Tev?
+
+407
+00:23:52,850 --> 00:23:55,644
+Jā, par to. ES vairs nedaru
+šo stāstnieku gigu.
+
+408
+00:23:55,644 --> 00:23:58,188
+Man ir apnicis palīdzēt cilvēkiem
+izdomāt savu dzīvi.
+
+409
+00:23:58,188 --> 00:24:01,233
+ES gribu savu dzīvi! Ar romantiku!
+
+410
+00:24:01,233 --> 00:24:03,652
+Un būs ar... viņu.
+
+411
+00:24:05,696 --> 00:24:06,530
+Man tas neienīst.
+
+412
+00:24:08,365 --> 00:24:11,285
+Un tas ir brīdis, kad
+diktora dzīve mainījās.
+
+413
+00:24:11,285 --> 00:24:12,244
+[pilsētnieki] AW!
+
+414
+00:24:12,244 --> 00:24:14,621
+Labi, es priecājos par tevi.
+
+415
+00:24:14,621 --> 00:24:15,789
+Paldies.
+
+416
+00:24:16,373 --> 00:24:18,333
+Vai tagad varam doties mājās?
+
+417
+00:24:18,333 --> 00:24:21,920
+Var braukt mājās, jā, var braukt
+mājās, bet tas ir tikai sākums!
+
+418
+00:24:22,504 --> 00:24:25,299
+Svarīgāk ir tas, ko paņemsi līdzi,
+dodoties ceļā!
+
+419
+00:24:25,299 --> 00:24:26,216
+[izsaucieni]
+
+420
+00:24:26,216 --> 00:24:27,634
+- [bļauj]
+- Kapēc!
+
+421
+00:24:27,634 --> 00:24:29,469
+Pagaidiet minūti. Ir - vai nav tā--
+
+422
+00:24:29,469 --> 00:24:30,679
+Mans brālis.
+
+423
+00:24:30,679 --> 00:24:33,640
+Viņš ir mazliet tradicionālāks par mani,
+bet es joprojām mīlu šo puisi.
+
+424
+00:24:34,141 --> 00:24:35,851
+- Vai drīkstam, Oskar?
+- Protams, Stīvs.
+
+425
+00:24:36,351 --> 00:24:37,561
+[smiekli]
+
+426
+00:24:37,561 --> 00:24:43,483
+<i>♪ Šī pasaule ir liels, vecs sāpju
+un stresa juceklis ♪</i>
+
+427
+00:24:43,483 --> 00:24:46,236
+<i> un cilvēki, kas tevi velk uz leju ♪</i>
+
+428
+00:24:46,820 --> 00:24:49,781
+<i> maz iespēju gūt panākumus ♪</i>
+
+429
+00:24:50,282 --> 00:24:54,620
+<i>, ka sliktais vienmēr uzvar ♪</i>
+
+430
+00:24:54,620 --> 00:24:58,373
+<i> laimīgas beigas neeksistē ♪</i>
+
+431
+00:24:59,082 --> 00:25:03,086
+<i> Bet te ir pērle, kuru, iespējams, esat palaidis garām ♪</i>
+
+432
+00:25:03,795 --> 00:25:10,219
+<i> Katra diena var būt laimīgs sākums ♪</i>
+
+433
+00:25:11,303 --> 00:25:14,515
+<i> laimīgu sākumu ♪</i>
+
+434
+00:25:17,684 --> 00:25:21,230
+<i> Šī dzīve piepildīta ar skumjām atvadām ♪</i>
+
+435
+00:25:21,230 --> 00:25:23,357
+<i> un mākoņainas debesis ♪</i>
+
+436
+00:25:23,357 --> 00:25:26,735
+<i> un dienas, kas it kā nebeidzas ♪</i>
+
+437
+00:25:26,735 --> 00:25:30,113
+<i> piezemējumi krietni pārsniedz augstākos ♪</i>
+
+438
+00:25:30,113 --> 00:25:34,368
+<i> nav liela iemesla ņirgāties ♪</i>
+
+439
+00:25:34,952 --> 00:25:38,997
+<i> laimīgas beigas neeksistē ♪</i>
+
+440
+00:25:38,997 --> 00:25:43,418
+<i> Bet te ir pērle, kuru, iespējams, esat palaidis garām ♪</i>
+
+441
+00:25:43,418 --> 00:25:46,588
+<i> katru dienu var būt ♪</i>
+
+442
+00:25:46,588 --> 00:25:50,676
+<i> laimīgu sākumu ♪</i>
+
+443
+00:25:51,385 --> 00:25:54,429
+<i> laimīgu sākumu ♪</i>
+
+444
+00:25:58,141 --> 00:26:02,729
+<i> un ar tevi viss kārtībā ♪</i>
+
+445
+00:26:02,729 --> 00:26:04,022
+<i> man viss kārtībā ♪</i>
+
+446
+00:26:04,022 --> 00:26:06,567
+<i> Mums viss kārtībā ♪</i>
+
+447
+00:26:07,150 --> 00:26:11,280
+<i> Mēs tiksim cauri vēl vienu dienu ♪</i>
+
+448
+00:26:11,280 --> 00:26:18,829
+<i> vēl vienu dienu ♪</i>
+
+449
+00:26:20,038 --> 00:26:25,711
+<i>♪ Šī pasaule ir liels, vecs sāpju
+un stresa juceklis ♪</i>
+
+450
+00:26:25,711 --> 00:26:28,672
+<i> un cilvēki, kas tevi velk uz leju ♪</i>
+
+451
+00:26:29,173 --> 00:26:32,009
+<i> maz iespēju gūt panākumus ♪</i>
+
+452
+00:26:32,509 --> 00:26:36,555
+<i>, ka sliktais vienmēr uzvar ♪</i>
+
+453
+00:26:37,097 --> 00:26:41,018
+<i> laimīgas beigas neeksistē ♪</i>
+
+454
+00:26:41,018 --> 00:26:45,480
+<i> Bet te ir pērle, kuru, iespējams, esat palaidis garām ♪</i>
+
+455
+00:26:45,981 --> 00:26:51,278
+<i> Katra diena var būt laimīgs sākums ♪</i>
+
+456
+00:26:51,278 --> 00:26:53,739
+<i> laimīgu sākumu ♪</i>
+
+457
+00:26:53,739 --> 00:26:58,869
+<i>♪ Laimīgs sākums laimīgs sākums ♪</i>
+
+458
+00:27:13,675 --> 00:27:18,639
+<i>♪ Šī pasaule ir liels, vecs sāpju
+un stresa juceklis ♪</i>
+
+459
+00:27:18,639 --> 00:27:22,226
+<i> un cilvēki, kas tevi velk uz leju ♪</i>
+
+460
+00:27:22,226 --> 00:27:25,604
+<i> maz iespēju gūt panākumus ♪</i>
+
+461
+00:27:25,604 --> 00:27:29,608
+<i>, ka sliktais vienmēr uzvar ♪</i>
+
+462
+00:27:30,192 --> 00:27:33,820
+<i> laimīgas beigas neeksistē ♪</i>
+
+463
+00:27:34,404 --> 00:27:38,450
+<i> Bet te ir pērle, kuru, iespējams, esat palaidis garām ♪</i>
+
+464
+00:27:38,951 --> 00:27:45,290
+<i> Katra diena var būt laimīgs sākums ♪</i>
+
+465
+00:27:46,416 --> 00:27:49,586
+<i> laimīgu sākumu ♪</i>
+
+466
+00:27:50,796 --> 00:27:54,132
+<i> laimīgu sākumu ♪</i>
+
+467
+00:27:55,092 --> 00:27:58,720
+<i> laimīgu sākumu ♪</i>
+
+468
+00:28:35,591 --> 00:28:40,762
+<i> Tagad esam beiguši ♪</i>
+
+469
+00:28:42,723 --> 00:28:47,853
+<i> nav iespējas izlikties ♪</i>
+
+470
+00:28:49,897 --> 00:28:56,195
+<i> es to vairs nevaru ♪</i>
+
+471
+00:28:56,987 --> 00:29:02,618
+<i>♪ Viss beidzies, viss beidzies
+un padarīts ♪</i>
+
+472
+00:29:04,244 --> 00:29:10,542
+<i> Neviens negrib stāties pretī patiesībai ♪</i>
+
+473
+00:29:11,210 --> 00:29:16,590
+– <i> Bet tas ir beidzies, tas ir beidzies, tas ir beidzies ♪</i>- <i> pāri, pāri, pāri ♪</i>
+
+474
+00:29:16,590 --> 00:29:19,218
+<i> tas ir beidzies ♪</i>
+
+475
+00:29:19,218 --> 00:29:21,845
+<i> un gatavs ♪</i>
+
+476
+00:29:21,845 --> 00:29:25,057
+<i> uz priekšu un atpakaļ ♪</i>
+
+477
+00:29:25,057 --> 00:29:29,061
+<i> tas ir atkal un atkal un paveikts ♪</i>
+
+478
+00:29:29,061 --> 00:29:32,314
+- [vokalizē]
+- <i> un gatavs ♪</i>
+
+479
+00:29:32,314 --> 00:29:35,275
+<i> tas ir beidzies ♪</i>
+
+480
+00:29:35,275 --> 00:29:42,324
+<i> un gatavs ♪</i>
+

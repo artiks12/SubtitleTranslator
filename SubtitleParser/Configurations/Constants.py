@@ -39,4 +39,5 @@ effectText = [EFFECT,EFFECT_CLOSE,EFFECT_OPEN]
 styleFormatting = [TAG_CLOSE,TAG_OPEN,ALIGN]
 contentFormatting = [SPEAKER,SYMBOL]
 formatting = styleFormatting + contentFormatting + effectText
+nonSymbols = styleFormatting + contentFormatting
 punctuations = [PUNCT_LEFT,PUNCT_RIGHT,PUNCT_IN,PUNCT_OUT]

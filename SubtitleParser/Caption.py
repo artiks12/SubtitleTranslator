@@ -1,11 +1,14 @@
 import stanza
-import Configurations.Constants as Constants
-from Configurations.Punctuations import *
-from Configurations.Tags import *
-from TaggedTextTokenizer import TaggedTextTokenizer, TaggedToken
-from SubtitleElementTokenizer import SubtitleElementTokenizer, SubtitleElement
 from typing import TypeVar
 import re
+
+import sys, os
+sys.path.append(os.path.join(os.path.dirname(sys.path[0]),''))
+import SubtitleParser.Configurations.Constants as Constants
+from SubtitleParser.Configurations.Punctuations import *
+from SubtitleParser.Configurations.Tags import *
+from SubtitleParser.TaggedTextTokenizer import TaggedTextTokenizer, TaggedToken
+from SubtitleParser.SubtitleElementTokenizer import SubtitleElementTokenizer, SubtitleElement
 
 CaptionType = TypeVar("CaptionType", bound="Caption")
 
@@ -29,6 +32,7 @@ class Caption():
         self.parts: list[SubtitleElement] = SubtitleTokenizer.parts
         self.index: int = index
         self.IsSubCaption = False
+        self.Order = 0
 
         self.__getRangesForParts()
         
@@ -41,7 +45,8 @@ class Caption():
     def SubCaption(
             self: CaptionType,
             parts: list[SubtitleElement], # Subparts of the caption
-            superCaption: CaptionType # Supercaption of the caption
+            superCaption: CaptionType, # Supercaption of the caption
+            order: int
         ) -> CaptionType:
         self.parts: list[SubtitleElement] = []
         for p in range(len(parts)):
@@ -50,6 +55,7 @@ class Caption():
 
         self.index: int = superCaption.index
         self.IsSubCaption = True
+        self.Order = order + 1
 
         self.__getRangesForParts()
 
@@ -69,7 +75,7 @@ class Caption():
                 break
         
         for part in reversed(self.parts):
-            if self.speakingEnd == -1 and part.subType not in Constants.formatting + [Constants.NEWLINE]:
+            if self.speakingEnd == -1 and (part.subType not in Constants.formatting + [Constants.NEWLINE] and not(re.fullmatch(r'(--+|––+)',part.value))):
                 self.speakingEnd = part.GetIndex()
             if self.speakingEnd > -1:
                 break
@@ -79,7 +85,8 @@ class Caption():
     def __getString(
             self,
             elements: list[SubtitleElement], # list of subtitle elements
-            newlines: bool # Should newlines be treated as new lines (True) or spaces (False).
+            newlines: bool, # Should newlines be treated as new lines (True) or spaces (False).
+            ellipses: bool = False, # Should multidashes (--) be treated as ellipses (True) or not (False).
         ) -> str:
         result = '' # Resulting string
         last = None # Last inserted element
@@ -90,17 +97,31 @@ class Caption():
                 value = elem.value
                 if not(newlines) and elem.subType == Constants.NEWLINE:
                     value = ' '
+                if ellipses and re.fullmatch(r'(--+|––+)',elem.value):
+                    value = '...'
                 result += (' '*spaces) + value
             last = elem
-        return result
+        return re.sub(r'\s\s+',' ',result)
     
     # String representation of Caption class is caption content in subtitle file.
     def __str__(self) -> str:
         return self.__getString(self.parts,True)
     
+    def GetCaptionContentInOneLine(self) -> str:
+        return self.__getString(self.parts,False)
+    
     # Method for getting speaking text as string in one line.
     def SpeakingTextAsStringOneline(self) -> str:
-        return self.__getString(self.GetSpeakingText(),False)
+        return self.__getString(self.GetSpeakingText(),False,True)
+    
+    # Method for getting speaking text as string in one line.
+    def SpeakingTextWithNewLines(self) -> str:
+        return self.__getString(self.GetSpeakingTextWithNewLines(),True)
+    
+    # Method for getting speaking text as string in one line.
+    def SpeakingTextWithoutStartAndEndEllipses(self, needStart = True, needEnd = True) -> str:
+        parts = self.GetTextWithoutEllipses(needStart,needEnd)
+        return self.__getString(parts,False)
     
     ##########                SUBTITLE ELEMENT FILTERRING BASE                ##########
     # Main method for aquirring subtitle elements filterred by specified filters and function.
@@ -160,6 +181,10 @@ class Caption():
     # Method that gets speaking text parts.
     def GetSpeakingText(self: CaptionType) -> list[SubtitleElement]:
         filters: list[str] = Constants.speakingText
+        return self.__filter(filters,self.__elemInSubTypes)
+    
+    def GetSpeakingTextWithNewLines(self: CaptionType) -> list[SubtitleElement]:
+        filters: list[str] = Constants.speakingText + [Constants.NEWLINE]
         return self.__filter(filters,self.__elemInSubTypes)
     
     def GetTextWithoutStyleFormating(self: CaptionType) -> list[SubtitleElement]:
@@ -251,7 +276,7 @@ class Caption():
     # Method to get subcaption with one speaker.
     def GetCopyWithOneSpeaker(self,speaker):
         parts = self.GetSpeakerRows(speaker)
-        return Caption().SubCaption(parts,self)
+        return Caption().SubCaption(parts,self,speaker)
     
     ##########                SUBTITLE STATE FUNCTIONS                ##########    
     # Method to check what is the last element in caption. 
@@ -260,7 +285,7 @@ class Caption():
         lastElement: SubtitleElement = parts[-1] 
 
         if lastElement.subType.startswith(Constants.PUNCT):
-            if re.match(r'(\.\.+|…)',lastElement.value): return Constants.UNFINISHED
+            if re.match(r'(\.\.+|…|--+|––+)',lastElement.value): return Constants.UNFINISHED
             elif lastElement.value in endings: return Constants.FINISHED
         elif lastElement.subType == Constants.WORD_CLOSE:
             return Constants.WRAPPING
@@ -280,6 +305,11 @@ class Caption():
         result = []
         result.append(self.HasWrappingSymbols())
         text = self.GetTextWithoutStyleFormating()
+        text = [item for item in text if not(item.subType == Constants.SPEAKER and item.value in dashes+[':'])]
+        if len(text) == 0:
+            result[0] = True
+            result.append(False)
+            return result
         for elem in text:
             if elem.subType == Constants.WORD and not(elem.value.isupper()):
                 result.append(False)
@@ -301,7 +331,7 @@ class Caption():
                     break
         if not(needEnd):
             for i in reversed(range(start,end+1)):
-                if not(re.match(r'(…|\.\.+)',self.parts[i].value)):
+                if not(re.match(r'(…|\.\.+|--+|––+)',self.parts[i].value)):
                     end = self.parts[i].GetIndex()
                     break
         

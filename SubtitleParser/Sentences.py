@@ -1,5 +1,7 @@
-from Caption import Caption
-import Configurations.Constants as Constants
+import sys, os
+sys.path.append(os.path.join(os.path.dirname(sys.path[0]),''))
+from SubtitleParser.Caption import Caption
+import SubtitleParser.Configurations.Constants as Constants
 
 class Sentences():
     """
@@ -66,3 +68,6 @@ class Sentences():
         for c in self._captions:
             result.append(c.index)
         return result
+    
+    def GetCaptions(self):
+        return self._captions

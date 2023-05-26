@@ -1,11 +1,13 @@
-from Configurations.Punctuations import wrappingSymbols, wrapping, punctuations, ellipses
-from Configurations.Tags import *
-from CustomStanzaTokenizer import CustomToken
-import Configurations.Constants as Constants
+import sys, os
+sys.path.append(os.path.join(os.path.dirname(sys.path[0]),''))
+from SubtitleParser.Configurations.Punctuations import wrappingSymbols, wrapping, punctuations, ellipses
+from SubtitleParser.Configurations.Tags import *
+from SubtitleParser.CustomTokenizer import CustomToken
+import SubtitleParser.Configurations.Constants as Constants
 import stanza
 import re
-from TaggedTextTokenizer import TaggedToken
-from SubtitleElementTokenizer import SubtitleElement
+from SubtitleParser.TaggedTextTokenizer import TaggedToken
+from SubtitleParser.SubtitleElementTokenizer import SubtitleElement
 
 class Sentence():
     pass
@@ -63,7 +65,7 @@ class SentenceMetadataFunctions():
         for i in range(len(sentence)):
             elem = sentence[i]
             part = parts[elem.id]
-            if re.match(r'(…|\.\.+)',elem.value):
+            if re.match(r'(…|\.\.+|--+|––+)',elem.value):
                 ellipses[elem.id] = [part.subType,part.value]
                 lastEllipse = elem.id
                 lastPosition = i
@@ -146,7 +148,7 @@ class SentenceMetadataFunctions():
             if not(captionId == parts[partId].GetCaption()):
                 elementId = 0
             captionId = parts[partId].GetCaption()
-            if parts[partId].subType in Constants.formatting:
+            if parts[partId].subType in Constants.nonSymbols:
                 result.append(parts[partId].copy(newId=str(captionId)+'-'+str(elementId)))
                 partId += 1
             elif partId in toIgnore:
@@ -193,7 +195,7 @@ if __name__ == "__main__":
     nlp = stanza.Pipeline(lang='en', processors='tokenize,pos,lemma,depparse', use_gpu=True)
     # text = '    <font color="#FFFFFF">    {\\an8}    #$&%@ ARTIS:<i> <a href="web"> Viņš iet {\\an8}uz "2. posmu",</a>\nROBS: jo <b>nevēlējās</b> <u>izgāzties</u>. @%&$#</i></font>'
     # text = "♪ Oh-oh-oh ♪♪ Who... ♪"
-    text = 'Do you...? Do you really... ..want ...to come...!!!'
+    text = 'Do you...? Do you really-- ..want ...to come...!!!'
     # text = 'Vai es...varu dejot...?'
     test1 = SentenceMetadataFunctions(text,nlp)
     

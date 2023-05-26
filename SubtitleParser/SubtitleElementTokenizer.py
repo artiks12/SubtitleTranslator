@@ -1,10 +1,13 @@
-from Configurations.Punctuations import *
-from Configurations.Tags import *
-from Configurations import Constants
-from TaggedTextTokenizer import TaggedToken, TaggedTextTokenizer
 import stanza
 from typing import TypeVar
 import re
+
+import sys, os
+sys.path.append(os.path.join(os.path.dirname(sys.path[0]),''))
+from SubtitleParser.Configurations.Punctuations import *
+from SubtitleParser.Configurations.Tags import *
+from SubtitleParser.Configurations import Constants
+from SubtitleParser.TaggedTextTokenizer import TaggedToken, TaggedTextTokenizer
 
 SubtitleElementType = TypeVar("SubtitleElementType", bound="SubtitleElement")
 
@@ -246,18 +249,21 @@ class SubtitleElementTokenizer():
         # Subtitle element has speaker type.
         if self.__isSpeaker(elem,last,next,needSpeaker):
             result = Constants.SPEAKER
-        # Subtitle element has opening bracket/quote type.
-        elif elem.value in closings.keys():
-            if elem.value in brackets.keys():
-                result = Constants.EFFECT_OPEN
-            else:
-                result = Constants.WORD_OPEN
-        # Subtitle element has closing bracket/quote type.
-        elif elem.value in closings.values():
-            if elem.value in brackets.values():
-                result = Constants.EFFECT_CLOSE
-            else:
-                result = Constants.WORD_CLOSE
+        # Subtitle element is opening bracket.
+        elif elem.value in brackets.keys():
+            result = Constants.EFFECT_OPEN
+        # Subtitle element is closing bracket.
+        elif elem.value in brackets.values():
+            result = Constants.EFFECT_CLOSE
+        # Subtitle element is in brackets.
+        elif isEffect:
+            result = Constants.EFFECT
+        # Subtitle element is opening quote.
+        elif elem.value in quotes.keys():
+            result = Constants.WORD_OPEN
+        # Subtitle element is closing quote.
+        elif elem.value in quotes.values():
+            result = Constants.WORD_CLOSE
         # Subtitle element is quote or apostrophe. Checks if it opens or closes text.
         elif elem.value == '"' or elem.value == "'":
             result = self.__getQuoteType(elem,last,next)
@@ -266,10 +272,7 @@ class SubtitleElementTokenizer():
             result = self.__getPunctuationType(elem,last,next)
         # Subtitle element has word type.
         else:
-            if isEffect:
-                result = Constants.EFFECT
-            else:
-                result = Constants.WORD
+            result = Constants.WORD
         return result
 
     # Method that checks if subtitle element has speaker type.
@@ -315,13 +318,17 @@ class SubtitleElementTokenizer():
         return False
 
 if __name__ == '__main__':
-    nlp = stanza.Pipeline(lang='en', processors='tokenize,pos,lemma,depparse')
+    nlp = stanza.Pipeline(lang='en', processors='tokenize,pos,lemma,depparse', download_method=None)
     # texten = "- Valence's comms data?\n<i>- <u>XANDER<b>:</b></u> His # password #</i>"
     # textlv = "- Valences sakaru dati<b>?</b>\n<i>- <u>KSENDERS<b>:</b></u> Viņa # parole #2.</i>"
     # test = '[punch] [hit] [kick]'
-    texten = "[Fran]: This is here.\n[John]: I-I think I'm going to have to challenge you on that, Fran..."
+    texten = "Mr. Blight , what are you-- I need an orphan! Now!"
 
     tokens = TaggedTextTokenizer(texten,nlp)
+    result = []
+    for word in tokens.tokens:
+        result.append(word.value)
+    print(result)
     subtitle = SubtitleElementTokenizer(tokens.tokens,1)
     for part in subtitle.parts:
         print(part.id,part.value,part.subType)

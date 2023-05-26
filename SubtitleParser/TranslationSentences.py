@@ -1,13 +1,16 @@
-from Sentences import Sentences
-from Caption import Caption
-from SubtitleElementTokenizer import SubtitleElement
-import Configurations.Constants as Constants
-import Translator
-from SentenceMetadataFunctions import SentenceMetadataFunctions
-from CustomStanzaTokenizer import CustomTokenizer
-from TaggedTextTokenizer import TaggedTextTokenizer
-from Alignment import GetAlignmentGroups, GetAlignmentOrders
-from TextBreaker import TextBreaker
+import sys, os
+sys.path.append(os.path.join(os.path.dirname(sys.path[0]),''))
+from SubtitleParser.Sentences import Sentences
+from SubtitleParser.Caption import Caption
+from SubtitleParser.SubtitleElementTokenizer import SubtitleElement
+import SubtitleParser.Configurations.Constants as Constants
+import SubtitleParser.Translator as Translator
+from SubtitleParser.SentenceMetadataFunctions import SentenceMetadataFunctions
+from SubtitleParser.CustomTokenizer import CustomTokenizer
+from SubtitleParser.TaggedTextTokenizer import TaggedTextTokenizer
+from SubtitleParser.Alignment import GetAlignmentGroups, GetAlignmentOrders
+from SubtitleParser.TextBreaker import TextBreaker
+import re
 
 class TranslationToken():
     pass
@@ -68,7 +71,7 @@ class TranslationSentences(Sentences):
     def __getTagglessParts(self,parts):
         taglessParts = []
         for i in range(len(parts)):
-            if not(parts[i].subType in Constants.formatting):
+            if not(parts[i].subType in Constants.nonSymbols):
                 taglessParts.append(i)
         return taglessParts
     
@@ -84,7 +87,7 @@ class TranslationSentences(Sentences):
         tag = []
         for i in range(len(parts)):
             caption = int(parts[i].GetCaption())
-            if not(parts[i].subType in Constants.formatting):
+            if not(parts[i].subType in Constants.nonSymbols):
                 taglessParts.append(i)
                 if len(temp)==0:
                     temp.append(i)
@@ -124,7 +127,7 @@ class TranslationSentences(Sentences):
         taglessText = self.__getTextFromAlignments(parts,taglessParts)
 
         # Get sentence metadata.
-        tokenizer = CustomTokenizer(self.TargetNLP)
+        tokenizer = CustomTokenizer(self.SourceNLP)
         tokenizer.Tokenize(taglessText)
 
         metadata = {
@@ -144,18 +147,19 @@ class TranslationSentences(Sentences):
             metadata = {
                 'parts':parts,
                 'sentences':[],
-                'ellipses':[]
+                'ellipseIds':[]
             }
             for sentence in tokenizer.sentences:
                 (textWithoutEllipses,ellipses) = senMeta.GetSentenceTextWithoutEllipses(sentence,parts)
                 metadata['sentences'].append(self.__getTextFromAlignments(parts,textWithoutEllipses))
-                metadata['ellipses'].extend(ellipses)
+                metadata['ellipseIds'].extend(ellipses)
         else:
             (taglessParts,subtitleParts,openingTags,closingTags) = self.__getSubtitlePartsAndTags(parts)
 
             tokenizer.GiveNewIds(taglessParts)
             
             metadata['parts'] = parts
+            metadata['ellipseIds'] = []
             metadata['openingTags'] = openingTags
             metadata['closingTags'] = closingTags
             metadata['textWithoutTags'] = taglessParts
@@ -171,6 +175,8 @@ class TranslationSentences(Sentences):
                 metadata['divisionParts'].extend(temp['divisionParts'])
                 metadata['ellipses'].extend(temp['ellipses'])
 
+            metadata['ellipseIds'] = [item[0] for item in metadata['ellipses']]
+
         return metadata
     
     # Method to replace current subtitle parts with tokens used by MT system.
@@ -178,7 +184,7 @@ class TranslationSentences(Sentences):
         senMeta = SentenceMetadataFunctions()
         
         # Get all caption subtitle elements.
-        (parts,ends) = senMeta.FixParts(metadata['parts'],list(metadata['sourceTokens'].values()),metadata['sentenceEnds'],metadata['ellipses'])
+        (parts,ends) = senMeta.FixParts(metadata['parts'],list(metadata['sourceTokens'].values()),metadata['sentenceEnds'],metadata['ellipseIds'])
 
         # Get Tagless text and subtitle alignments as well as tag and align positions.
         taglessParts = self.__getTagglessParts(parts)
@@ -259,14 +265,13 @@ class TranslationSentences(Sentences):
             ellipsesSource[newSourceEllipses[id]] = [newTargetEllipses[id]]
             ellipsesTarget[newTargetEllipses[id]] = [newSourceEllipses[id]]
 
-        # Get new source and target token alignments.
         newSourceAlignments = self.__getNewAlignments(newSourceIds,newTargetIds,metadata['sourceAlignments'],ellipsesSource)
         newTargetAlignments = self.__getNewAlignments(newTargetIds,newSourceIds,metadata['targetAlignments'],ellipsesTarget)
 
         # Get new source and target token alignment group order.
         sourceAlignmentGroups = GetAlignmentGroups(newSourceAlignments,newTargetAlignments,0)
         targetAlignmentGroups = GetAlignmentGroups(newTargetAlignments,newSourceAlignments,0)
-        newGroupAlignmentOrder = GetAlignmentOrders(sourceAlignmentGroups,targetAlignmentGroups)
+        newGroupAlignmentOrder = GetAlignmentOrders(sourceAlignmentGroups,targetAlignmentGroups,newTargetRanges,newTargetTokens)
 
         metadata['sourceAlignments'] = newSourceAlignments
         metadata['targetAlignments'] = newTargetAlignments
@@ -288,6 +293,7 @@ class TranslationSentences(Sentences):
         newTargetEllipses = []
         newTargetRanges = []
         offset = 0
+
         for group in metadata['groupAlignmentOrder']:
             # First group to be inserted
             if len(tempSource) == 0:
@@ -300,8 +306,9 @@ class TranslationSentences(Sentences):
                     newTargetRanges.append(newRange)
             else:
                 divisionPart = metadata['divisionParts'][divisionId]
+                nextSource = tempSource.copy() + group[0].copy()
                 # If enough tokens inserted, then move to next division group.
-                if len(tempSource) >= len(divisionPart):
+                if len(nextSource) > len(divisionPart):
                     checkDivisionPart = []
                     # Go to next relevant division group.
                     while len(checkDivisionPart) < len(tempSource):
@@ -339,7 +346,8 @@ class TranslationSentences(Sentences):
                     newRange = list(map(lambda a : a + offset, metadata['targetWordRanges'][id].copy()))
                     newTargetRanges.append(newRange)
 
-        metadata = self.GetNewTokenAlignments(metadata,newTargetTokens,newTargetIds,newTargetEllipses,newTargetRanges)
+        if len(newTargetEllipses) > 0:
+            metadata = self.GetNewTokenAlignments(metadata,newTargetTokens,newTargetIds,newTargetEllipses,newTargetRanges)
 
         return metadata
     
@@ -407,7 +415,7 @@ class TranslationSentences(Sentences):
 
         # Translate them.
         metadata = Translator.Translator(metadata,self.SourceNLP,self.TargetNLP,translator)
-
+        
         # Change current subtitle elements to use MT tokens if there are any.
         if translator.hasAligner:
             metadata = self.FixSubtitleParts(metadata)
@@ -451,16 +459,23 @@ class TranslationSentences(Sentences):
         for part in parts:
             spaces = ''
             if not(last == None): spaces = ' ' * (part.start-last.end)
-            if part.subType in [Constants.EFFECT_OPEN,Constants.EFFECT_CLOSE,Constants.SYMBOL]:
+            if part.subType in [Constants.EFFECT_OPEN,Constants.EFFECT_CLOSE,Constants.SYMBOL,Constants.ALIGN]:
                 if len(temp)>0:
                     translationPieces.append(len(textPieces))
                     textPieces.append(temp)
                     temp = ''
                 textPieces.append(spaces+part.value)
             elif part.subType == Constants.NEWLINE:
-                if len(textPieces)>0 and len(temp)==0:
-                    textPieces.append('\n')
+                print(len(textPieces),textPieces)
+                print(len(temp),temp)
+                tagless = re.sub(r'(\{.*?\}|<.*?>)','',temp)
+                if len(textPieces)>0 and len(tagless)==0:
+                    toInsert = temp
+                    if len(toInsert)>0:
+                        temp = ''
+                    textPieces.append(toInsert+'\n')
                 else:
+                    temp += ' '
                     needToBreakLines = True
             else:
                 if len(temp)==0:
@@ -475,6 +490,7 @@ class TranslationSentences(Sentences):
             translationPieces.append(len(textPieces))
             textPieces.append(temp)
 
+        print(textPieces)
         # Translate all text pieces found.
         for p in range(len(textPieces)):
             if p in translationPieces:
@@ -489,7 +505,6 @@ class TranslationSentences(Sentences):
             taggedTokenizer = TaggedTextTokenizer(texts[0],self.TargetNLP,True)
             texts[0] = textBreaker.GetTextLinesForSubtitle('',texts[0],'',taggedTokenizer,self._captions[0],hasSpaces)
         return texts
-
 
 if __name__ == "__main__":
     pass

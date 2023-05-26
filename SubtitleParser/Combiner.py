@@ -1,6 +1,8 @@
-from Caption import Caption
-from TranslationSentences import TranslationSentences
-import Configurations.Constants as Constants
+import sys, os
+sys.path.append(os.path.join(os.path.dirname(sys.path[0]),''))
+from SubtitleParser.Caption import Caption
+from SubtitleParser.TranslationSentences import TranslationSentences
+import SubtitleParser.Configurations.Constants as Constants
 
 class CombiningState():
     def __init__(self):
@@ -51,6 +53,8 @@ def addToCombined(t: Caption,SourceNLP,TargetNLP,PretokenizeNLP,combinerInfo: Co
                     if combinerInfo.combined[combinerInfo.lastUnfinished].TryAddCaption(t) == False:
                         combinerInfo.combined.append(TranslationSentences(t,SourceNLP,TargetNLP,PretokenizeNLP))
                         combinerInfo.count += 1
+                    elif not(CaptionEndState == Constants.UNFINISHED):
+                        combinerInfo.lastUnfinished = -1
                 # Last caption ends a sentence.
                 else:
                     combinerInfo.combined.append(TranslationSentences(t,SourceNLP,TargetNLP,PretokenizeNLP))
@@ -82,15 +86,10 @@ def addToCombined(t: Caption,SourceNLP,TargetNLP,PretokenizeNLP,combinerInfo: Co
 def combiner(subtitles,SourceNLP,TargetNLP,PretokenizeNLP):
     combinerInfo = CombiningState()
     
-    captions = []
     for s in subtitles:
         t = Caption().NewCaption(s.content,s.index,SourceNLP)
-        captions.append(t)
-        # Caption has wrappingSymbols or no speaking text.
-        if True in t.IsIsolated():
-            addToCombined(t,SourceNLP,TargetNLP,PretokenizeNLP,combinerInfo)
         # Caption has one speaker
-        elif not(t.HasMultipleSpeakers()):
+        if not(t.HasMultipleSpeakers()):
             addToCombined(t,SourceNLP,TargetNLP,PretokenizeNLP,combinerInfo)
         # Caption has multiple speakers
         else:
