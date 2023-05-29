@@ -194,7 +194,9 @@ class SubtitleElementTokenizer():
             last: SubtitleElement | None, # Last added subtitle element.
             next: TaggedToken | None # Next comming subtitle element.
         ) -> str:
-        if last == None:
+        if last == None and next == None:
+            return Constants.PUNCT_OUT
+        elif last == None:
             nextDistance = next.start_char - elem.end_char # Distance between current and next element.
             if nextDistance == 0:
                 return Constants.PUNCT_LEFT

@@ -17,14 +17,16 @@ def GetDifferentSubtitles(simalign, tilde):
         for x in range(len(tilde)):
             if not(simalign[x].content == tilde[x].content):
                 result.append(x+1)
-
-    return result
+        return result
+    else:
+        return (len(simalign),len(tilde))
 
 if __name__ == "__main__":
-    path = 'DataPreparator\\TranslatedParalel\\'
+    pathHyp = 'DataPreparator\\TranslatedOriginalToParalel\\'
+    pathRef = 'DataPreparator\\Paralel\\'
     for x in range(5):
-        simalign = path+hypothesesFiles[x]+'.tilde.SimAlign.srt'
-        tilde = path+hypothesesFiles[x]+'.tilde.tilde.srt'
+        simalign = pathHyp+'TildeSimAlign\\'+hypothesesFiles[x]+'.tilde.SimAlign.srt'
+        tilde = pathRef+'TildeSimAlign\\'+hypothesesFiles[x]+'.tilde.SimAlign.srt'
         
         f = open(simalign, encoding='utf-8-sig')
         subtitlesSimalign = list(srt.parse(f.read()))

@@ -70,15 +70,3 @@ class TildeTranslator(MTSystem):
         sourceTokens = self.GetTokensForAlignment(text,MT['sourceWordRanges'],offsetSource)
         targetTokens = self.GetTokensForAlignment(MT['translation'],MT['targetWordRanges'],offsetTarget)
         return (sourceTokens,targetTokens)
-
-
-if __name__ == "__main__":
-    from ids import system_id, client_id
-    translator = TildeTranslator(False,None,system_id,client_id)
-
-    print(translator.GetTranslationString('I want to--'))
-    print(translator.GetTranslationString('If you want to go--'))
-    print(translator.GetTranslationString('If he sees them--'))
-    print(translator.GetTranslationString('I want to')+'--')
-    print(translator.GetTranslationString('If you want to go')+'--')
-    print(translator.GetTranslationString('If he sees them')+'--')

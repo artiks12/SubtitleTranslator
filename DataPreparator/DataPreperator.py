@@ -22,6 +22,13 @@ filenamesLV = [
     'The.Big.Door.Prize.S01E09.WEB.x264-TORRENTGALAXY.Latvian.LAV',
 ]
 
+variant = {
+    '.tilde.SimAlign.srt':'TildeSimAlign/',
+    '.tilde.tilde.srt':'TildeTilde/',
+    '.srt':'TildeDocument/',
+    '.tilde.Sentences.srt':'TildeSentences/',
+}
+
 def GetNormalizedText(caption: Caption):
     if caption.HasMultipleSpeakers():
         speakers = []
@@ -41,7 +48,10 @@ def GetNormalizedText(caption: Caption):
             return ''.join(speakers)
     else:
         if caption.IsIsolated()[0]: return ''
-        return caption.SpeakingTextWithNewLines()
+        text = caption.SpeakingTextWithNewLines()
+        while re.fullmatch(r'[\n\r\s\t]+',text[-1]):
+            text = text[:-1]
+        return text
 
 def Normalize(subtitles,nlp):
     newSubtitles = []
@@ -115,7 +125,7 @@ def CheckSubtitleSpeakerEquality(source, target):
         print(speakerProblems)
     
 def WriteToFile(path,file,subtitles):
-    output = path+file+'.srt'
+    output = path+file
     
     f = open(output, mode='w', encoding='utf-8-sig')
     f.write(srt.compose(subtitles))
@@ -123,28 +133,28 @@ def WriteToFile(path,file,subtitles):
 
 if __name__ == "__main__":
     nlpEN = stanza.Pipeline(lang='en', processors='tokenize,pos,lemma,depparse', use_gpu=True)
-    nlpLV = stanza.Pipeline(lang='lv', processors='tokenize,pos,lemma,depparse', use_gpu=True)
 
-    for x in range(len(filenamesEN)):
-        sourceInput = 'DataPreparator/Original/'+filenamesEN[x]+'.srt'
-        targetInput = 'DataPreparator/Original/'+filenamesLV[x]+'.srt'
-        
-        f = open(sourceInput, encoding='utf-8-sig')
-        subtitlesEN = list(srt.parse(f.read()))
-        f.close()
-        f = open(targetInput, encoding='utf-8-sig')
-        subtitlesLV = list(srt.parse(f.read()))
-        f.close()
+    for file in variant:
+        folder = variant[file]
+        for x in range(5):
+            sourceInput = 'DataPreparator/TranslatedOriginal/'+folder+filenamesEN[x]+file
+            targetInput = 'DataPreparator/Paralel/'+filenamesLV[x]+'.srt'
+            
+            f = open(sourceInput, encoding='utf-8-sig')
+            subtitlesEN = list(srt.parse(f.read()))
+            f.close()
+            
+            f = open(targetInput, encoding='utf-8-sig')
+            subtitlesLV = list(srt.parse(f.read()))
+            f.close()
 
-        subtitlesEN = Normalize(subtitlesEN,nlpEN)
-        subtitlesLV = Normalize(subtitlesLV,nlpLV)
-    
-        subtitlesEN, subtitlesLV = GetParalelSubtitles(subtitlesEN,subtitlesLV)
+            subtitlesEN = Normalize(subtitlesEN,nlpEN)
+        
+            subtitlesEN, subtitlesLV = GetParalelSubtitles(subtitlesEN,subtitlesLV)
 
-        print(filenamesEN[x])
-        
-        CheckSubtitleSpeakerEquality(subtitlesEN, subtitlesLV)
-        
-        path = 'DataPreparator/Prepared/'
-        WriteToFile(path,filenamesEN[x],subtitlesEN)
-        WriteToFile(path,filenamesLV[x],subtitlesLV)
+            print(folder,filenamesEN[x])
+            
+            CheckSubtitleSpeakerEquality(subtitlesEN, subtitlesLV)
+            
+            pathMT = 'DataPreparator/TranslatedOriginalToParalel/'+folder
+            WriteToFile(pathMT,filenamesEN[x]+file,subtitlesEN)

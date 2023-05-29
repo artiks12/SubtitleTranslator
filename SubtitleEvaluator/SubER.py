@@ -26,10 +26,9 @@ variant = {
 }
 
 if __name__ == "__main__":
-    pathHyp = sys.path[-1]+'DataPreparator\\TranslatedParalel\\'
+    pathHyp = sys.path[-1]+'DataPreparator\\TranslatedOriginalToParalel\\'
     pathRef = sys.path[-1]+'DataPreparator\\Paralel\\'
         
-    logFile = open(sys.path[-1]+'SubtitleEvaluator\\log.txt', mode='w', encoding='utf-8-sig')
     for file in variant:
         result = open(sys.path[-1]+'SubtitleEvaluator\\SubERscores\\'+file+'.txt', mode='w', encoding='utf-8-sig')
         folder = variant[file]
@@ -40,4 +39,3 @@ if __name__ == "__main__":
             result.write(hypothesesFiles[x]+'\n')
             result.write(str(check_output(["suber", "-H", hypFile, '-R', refFile]) )+'\n')
         result.close()
-    logFile.close()

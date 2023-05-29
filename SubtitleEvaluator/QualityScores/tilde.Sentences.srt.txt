@@ -1,10 +1,10 @@
 ﻿City.on.Fire.S01E03.1080p.WEB.H264-GGWP.
-{'Sigma': 82.761, 'BLEU': 27.639, 'chrF++': chrF2++ = 50.72, 'TER': TER = 62.36}
+{'Sigma': 82.791, 'BLEU': 27.649, 'chrF++': chrF2++ = 50.73, 'TER': TER = 62.38}
 Schmigadoon.S02E06.720p.WEBRip.2CH.x265.HEVC-PSA.English [SDH].ENG.
-{'Sigma': 83.499, 'BLEU': 28.515, 'chrF++': chrF2++ = 51.68, 'TER': TER = 61.48}
+{'Sigma': 83.742, 'BLEU': 28.568, 'chrF++': chrF2++ = 51.65, 'TER': TER = 61.60}
 silo.s01e03.720p.web.h264-ggez.English [SDH].ENG.
-{'Sigma': 85.739, 'BLEU': 29.288, 'chrF++': chrF2++ = 51.56, 'TER': TER = 61.73}
+{'Sigma': 84.927, 'BLEU': 29.359, 'chrF++': chrF2++ = 51.48, 'TER': TER = 61.79}
 Ted.Lasso.S03E08.720p.10bit.WEBRip.2CH.x265.HEVC-PSA_ENG.
-{'Sigma': 83.858, 'BLEU': 21.581, 'chrF++': chrF2++ = 46.16, 'TER': TER = 71.27}
+{'Sigma': 83.842, 'BLEU': 21.635, 'chrF++': chrF2++ = 46.08, 'TER': TER = 71.35}
 The.Big.Door.Prize.S01E09.WEB.x264-TORRENTGALAXY.English [SDH].ENG.
-{'Sigma': 82.008, 'BLEU': 24.151, 'chrF++': chrF2++ = 48.68, 'TER': TER = 67.02}
+{'Sigma': 81.81, 'BLEU': 24.255, 'chrF++': chrF2++ = 48.74, 'TER': TER = 67.06}
