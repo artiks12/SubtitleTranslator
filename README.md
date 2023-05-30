@@ -287,6 +287,116 @@ Neither source and target subtitles comply to metric (<b>neitherFollows</b>)
 </li>
 </ul>
 
+# Adding Machine translator to solution
+In SubtitleParser/Translators folder create a python file that will store machine translator class. This class needs to inherit from MTSystem class. Let's take TildeTranslator class as an example:
+```console
+import sys, os
+sys.path.append(os.path.join(os.path.dirname(sys.path[0]),''))
+from SubtitleParser.Translators.MTSystem import MTSystem
+import requests
+
+class TildeTranslator(MTSystem):
+    def __init__(
+        self,
+        hasAligner,
+        aligner,
+        system_id,
+        client_id,
+    ) -> None:
+        super().__init__(hasAligner,aligner,'tilde')
+        self.system_id = system_id
+        self.client_id = client_id
+```
+<ul>
+<li>
+hasAligner (mandatory) - boolean that tells if MT API word aligner is used.
+</li>
+<li>
+aligner (mandatory) - instance of default aligner. Use SimAlign.
+</li>
+<li>
+system_id (if necessary) - which machine translation system to use.
+</li>
+<li>
+client_id (if necessary) - client id that allows user to use MT API.
+</li>
+</ul>
+in "super().__init__(hasAligner,aligner,'tilde')" instead of tilde you should add the name of your machine translation system.
+
+There should be a Translate method that is called when translation is neede for text.
+```console
+def Translate(self,text,withTags,SourceNLP,TargetNLP,offsetSource,offsetTarget):
+	data = self.__apiCall(text,withTags)
+
+	if self.hasAligner:
+		return self.GetTildeMetadata(data,text,offsetSource,offsetTarget,SourceNLP,TargetNLP)
+	return self.GetTranslationMetadata(text,data['translation'],SourceNLP,TargetNLP,offsetSource,offsetTarget) 
+```
+Here __apiCall should return all translation data including:
+<ul>
+<li>
+source text tokens 
+</li>
+<li>
+target text tokens
+</li>
+<li>
+word alignments
+</li>
+<li>
+token ranges in text.
+</li>
+<li>
+translation.
+</li>
+</ul>
+
+After getting all data, Translate method checks if machine translator word aligner is used. If no then GetTranslationMetadata should be called (It is already made in MTSystem class). Otherwise you should implement a method that gets all data in specific format:
+```console
+def GetTildeMetadata(self,data,text,offsetSource,offsetTarget,SourceNLP,TargetNLP):
+	(sourceTokens,targetTokens) = self.GetTokensForSourceAndTarget(text,data,offsetSource,offsetTarget)
+	alignmentData = {
+		'sourceTokens':sourceTokens,
+		'targetTokens':targetTokens,
+		'sourceWordRanges':data['sourceWordRanges'],
+		'targetWordRanges':data['targetWordRanges'],
+		'wordAlignment':data['wordAlignment'],
+		'confidentWordAlignment':data['confidentWordAlignment'],
+		'translation':data['translation']
+	}
+	if len(data['wordAlignment']) == 0:
+		alignmentData = self.GetTranslationMetadata(text,data['translation'],SourceNLP,TargetNLP,offsetSource,offsetTarget)
+	return alignmentData
+```
+Key values may be different for each machine translator and every machine translator can have different output values, but Translate method needs to return all data with keys as shown for alignmentData dictionary. Assuming we Translate "This is a sentence." to latvian which would be "Šis ir teikums." alignmentData should contain all data in following formats:
+```console
+alignmentData = {
+	'sourceTokens': {0: 'This', 1: 'is', 2: 'a', 3: 'sentence', 4: '.'},
+	'targetTokens': {0: 'Šis', 1: 'ir', 2: 'teikums', 3: '.'},
+	'sourceWordRanges': [ [0, 4], [5, 7], [8, 9], [10, 18], [18, 19] ],
+	'targetWordRanges': [ [0, 3], [4, 6], [7, 14], [14, 15] ],
+	'wordAlignment': [ [0, 0], [1, 1], [2, 2], [3, 2], [4, 3] ],
+	'confidentWordAlignment': [ [0, 0], [1, 1], [2, 2], [3, 2], [4, 3] ],
+	'translation': 'Šis ir teikums'
+}
+```
+confidentWordAlignment value can be None because it is not currently used. Every token from source tokens should be aligned to at least one token from target and vice versa.
+The final if statement in GetTildeMetadata is used in case no word alignment data is returned by API, which is the case for the example above so your method should include such statement as well.
+
+In Main.py file in GetTranslator method add if statement for your machine translation system. Assuming the translation system class is "MyMTsystem" and name added in its constructor is "my_system" you should add the following if statement in GetTranslator method:
+```console
+if translator == 'my_system':
+	return MyMTsystem(hasAligner,aligner,system,id)
+```
+The result would look like this:
+```console
+def GetTranslator(translator,system,id,hasAligner,aligner):
+    if translator == 'tilde':
+        return TildeTranslator(hasAligner,aligner,system,id)
+	if translator == 'my_system':
+		return MyMTsystem(hasAligner,aligner,system,id)
+```
+
 # Licensing
 This work is licensed under a
 [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].

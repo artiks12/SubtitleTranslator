@@ -220,7 +220,7 @@ def Translate(args: list):
                 if param[0] == '-wa': wordAligner = bool(param[1])
                 if param[0] == '-t': 
                     values = param[1].split(':')
-                    translator = GetTranslator(values[0],values[1],values[2],values[3],simAlign)
+                    translator = GetTranslator(values[0],values[1],values[2],bool(values[3]),simAlign)
         if wordAligner:
             MainTranslate(
                 filename,
