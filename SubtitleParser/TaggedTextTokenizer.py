@@ -6,8 +6,6 @@ import re
 import sys, os
 sys.path.append(os.path.join(os.path.dirname(sys.path[0]),''))
 from SubtitleParser.CustomTokenizer import CustomTokenizer
-from SubtitleParser.Configurations.Punctuations import wrappingSymbols, endings
-from SubtitleParser.Configurations.Tags import *
 
 class TaggedToken():
     """

@@ -505,6 +505,3 @@ class TranslationSentences(Sentences):
             taggedTokenizer = TaggedTextTokenizer(texts[0],self.TargetNLP,True)
             texts[0] = textBreaker.GetTextLinesForSubtitle('',texts[0],'',taggedTokenizer,self._captions[0],hasSpaces)
         return texts
-
-if __name__ == "__main__":
-    pass

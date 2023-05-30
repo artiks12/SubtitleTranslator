@@ -1,4 +1,3 @@
-import stanza
 import re
 
 class CustomToken():
@@ -138,23 +137,3 @@ class CustomTokenizer():
             tokens: list[CustomToken]
         ):
         return [t.value for t in tokens]
-
-if __name__ == "__main__":
-    nlp = stanza.Pipeline(lang='en', processors='tokenize,pos,lemma,depparse', use_gpu=True,)
-    # text = 'Uh, I mean, to be honest, Mrs. D, from the outside perspective, it kind of seems like something\'s going on.'
-    # text = 'Šis teikums ir ļoti garš...?!'
-    # text = 'Vai es...varu dejot...?'
-    # text = "♪ Oh-oh-oh ♪♪ Who ♪"
-    text = 'I want to-- Look out!'
-    # text = 'I want to... Look out!'
-    test1 = CustomTokenizer(nlp)
-    test1.Tokenize(text,True)
-    
-    for token in test1.tokens:
-        print(token.id,token.start,token.end,token.value,token.upos)
-
-    for sentence in test1.sentences:
-        print('-----------------------')
-        for word in sentence:
-            print(word.value,end=' ')
-        print()

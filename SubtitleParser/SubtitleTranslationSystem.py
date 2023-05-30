@@ -1,12 +1,13 @@
+import sys, os
+sys.path.append(os.path.join(os.path.dirname(sys.path[0]),''))
 from datetime import datetime
-from Combiner import combiner
-from Translators.TildeTranslator import TildeTranslator
-from Translators.ids import system_id, client_id
+from SubtitleParser.Combiner import combiner
+from SubtitleParser.Translators.TildeTranslator import TildeTranslator
+from SubtitleParser.Translators.ids import system_id, client_id
 import stanza
 import srt
-from SubtitleGuidelineMetrics import SubtitleGuidelineMetrics
+from SubtitleParser.SubtitleGuidelineMetrics import SubtitleGuidelineMetrics
 from simalign import SentenceAligner
-import sys
 
 class SubtitleTranslationSystem():
     def __init__(
@@ -61,6 +62,30 @@ class SubtitleTranslationSystem():
         f.close()
 
         print('Process finished at',datetime.now())
+
+def MainTranslate(
+        filename,
+        subtitlingGuidelines,
+        simAlign,
+        translator,
+        sourceLang = 'en',
+        targetLang = 'lv',
+        pathInput = 'SubtitleParser/Subtitles/',
+        pathOutput = 'SubtitleParser/Result/',
+        subtitleFormat = 'srt',
+    ):
+    SourceNLP = stanza.Pipeline(lang=sourceLang, processors='tokenize,pos,lemma,depparse', use_gpu=True)
+    TargetNLP = stanza.Pipeline(lang=targetLang, processors='tokenize,pos,lemma,depparse', use_gpu=True)
+    PretokenizeNLP = stanza.Pipeline(lang=sourceLang, processors='tokenize,pos,lemma,depparse', use_gpu=True, tokenize_pretokenized=True)
+    reader = srt.parse
+    writter = srt.compose
+
+    MainSystem = SubtitleTranslationSystem(SourceNLP,TargetNLP,PretokenizeNLP,reader,writter,translator,subtitlingGuidelines,simAlign)
+
+    sourcefile = pathInput+filename+'.'+subtitleFormat
+    targetfile = pathOutput+filename+'.'+subtitleFormat
+    
+    MainSystem.Execute(sourcefile,targetfile)
 
 if __name__ == "__main__":
     SourceNLP = stanza.Pipeline(lang='en', processors='tokenize,pos,lemma,depparse', use_gpu=True)

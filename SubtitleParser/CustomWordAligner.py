@@ -27,12 +27,3 @@ def GetCustomAlignments(simAlign,sourceTokens,targetTokens):
     }
 
     return result
-
-if __name__ == "__main__":
-    from simalign import SentenceAligner
-    simAlign = SentenceAligner(model='bert', token_type='bpe', matching_methods="maifr")
-
-    source = 'Where is Josh ? If you hurt him Mr. Skinner will remain unharmed as long as you do everything you\'ve been asked to do .'
-    target = 'Kur ir Džošs ? Ja jūs viņam nodarīsiet pāri , misters Skinners paliks neskarts tik ilgi , kamēr jūs darīsiet visu , kas jums prasīts .'
-
-    print(GetCustomAlignments(simAlign,source,target)['wordAlignment'])

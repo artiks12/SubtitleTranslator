@@ -5,26 +5,26 @@ from math import exp, log
 sys.path.append(os.path.join(os.path.dirname(sys.path[0]),''))
 
 referenceFiles = [
-    'City.on.Fire.S01E03.WEB.x264-TORRENTGALAXY.Latvian.LAV.srt',
-    'Schmigadoon.S02E06.720p.WEBRip.2CH.x265.HEVC-PSA.Latvian.LAV.srt',
-    'silo.s01e03.720p.web.h264-ggez.Latvian.LAV.srt',
-    'Ted.Lasso.S03E08.720p.10bit.WEBRip.2CH.x265.HEVC-PSA.LAV.srt',
-    'The.Big.Door.Prize.S01E09.WEB.x264-TORRENTGALAXY.Latvian.LAV.srt',
+    'City.on.Fire.S01E03.WEB.x264-TORRENTGALAXY.Latvian.LAV',
+    'Schmigadoon.S02E06.720p.WEBRip.2CH.x265.HEVC-PSA.Latvian.LAV',
+    'silo.s01e03.720p.web.h264-ggez.Latvian.LAV',
+    'Ted.Lasso.S03E08.720p.10bit.WEBRip.2CH.x265.HEVC-PSA.LAV',
+    'The.Big.Door.Prize.S01E09.WEB.x264-TORRENTGALAXY.Latvian.LAV',
 ]
 
 hypothesesFiles = [
-    'City.on.Fire.S01E03.1080p.WEB.H264-GGWP.',
-    'Schmigadoon.S02E06.720p.WEBRip.2CH.x265.HEVC-PSA.English [SDH].ENG.',
-    'silo.s01e03.720p.web.h264-ggez.English [SDH].ENG.',
-    'Ted.Lasso.S03E08.720p.10bit.WEBRip.2CH.x265.HEVC-PSA_ENG.',
-    'The.Big.Door.Prize.S01E09.WEB.x264-TORRENTGALAXY.English [SDH].ENG.',
+    'City.on.Fire.S01E03.1080p.WEB.H264-GGWP',
+    'Schmigadoon.S02E06.720p.WEBRip.2CH.x265.HEVC-PSA.English [SDH].ENG',
+    'silo.s01e03.720p.web.h264-ggez.English [SDH].ENG',
+    'Ted.Lasso.S03E08.720p.10bit.WEBRip.2CH.x265.HEVC-PSA_ENG',
+    'The.Big.Door.Prize.S01E09.WEB.x264-TORRENTGALAXY.English [SDH].ENG',
 ]
 
 variant = {
-    'tilde.SimAlign.srt':'TildeSimAlign\\',
-    'tilde.tilde.srt':'TildeTilde\\',
-    'srt':'TildeDocument\\',
-    'tilde.Sentences.srt':'TildeSentences\\',
+    'tilde.SimAlign':'SimAlign\\',
+    'tilde.tilde':'Tilde\\',
+    'tilde.document':'Document\\',
+    'tilde.Sentences':'Sentences\\',
 }
 
 import re
@@ -345,20 +345,26 @@ def CheckSegmentationEquality(sys_file_path, ref_file_path, srt=True):
 
     return sigma_score
 
-def MainQualityEvaluator():
-    pathHyp = sys.path[-1]+'DataPreparator\\TranslatedOriginalToParalel\\'
-    pathRef = sys.path[-1]+'DataPreparator\\Paralel\\'
-        
-    for file in variant:
-        result = open(sys.path[-1]+'SubtitleEvaluator\\QualityScores\\'+file+'.txt', mode='w', encoding='utf-8-sig')
-        folder = variant[file]
-        for x in range(5):
-            hypFile = pathHyp+folder+hypothesesFiles[x]+file
-            refFile = pathRef+referenceFiles[x]
-
-            result.write(hypothesesFiles[x]+'\n')
-            result.write(str(CheckSegmentationEquality(hypFile,refFile))+'\n')
+def MainQualityEvaluator(
+        hypFilename,
+        refFilename,
+        pathHyp = 'SubtitleEvaluator/Hypotheses/',
+        pathRef = 'SubtitleEvaluator/References/',
+        outputPath = 'SubtitleEvaluator/QualityScores/',
+        subtitleFormat = 'srt',
+        outputFile = None
+    ):
+    hypFile = pathHyp+hypFilename+'.'+subtitleFormat
+    refFile = pathRef+refFilename+'.'+subtitleFormat
+    if outputFile == None:
+        result = open(outputPath+hypFilename+'.txt', mode='w', encoding='utf-8-sig')
+        result.write(hypFilename+'\n')
+        result.write(str(CheckSegmentationEquality(hypFile,refFile))+'\n')
         result.close()
+    else:
+        outputFile.write(hypFilename+'\n')
+        outputFile.write(str(CheckSegmentationEquality(hypFile,refFile))+'\n')
+        
 
 def WordAlignerCompare():
     path = sys.path[-1]+'DataPreparator\\TranslatedParalel\\'
@@ -373,6 +379,23 @@ def WordAlignerCompare():
         print(CheckSegmentationEquality(hypFile,refFile))
 
 if __name__ == "__main__":
-    MainQualityEvaluator()
+    pathHyp = sys.path[-1]+'DataPreparator\\TranslatedParalel\\'
+    pathRef = sys.path[-1]+'DataPreparator\\Paralel\\'
+    outputPath = sys.path[-1]+'SubtitleEvaluator\\QualityScores\\'
+    for file in variant:
+        outputFile = open(outputPath+file+'.txt', mode='w', encoding='utf-8-sig')
+        folder = variant[file]
+        for x in range(5):
+            hypFilename = hypothesesFiles[x]+'.'+file
+            refFilename = referenceFiles[x]
+            MainQualityEvaluator(
+                hypFilename,
+                refFilename,
+                pathHyp+folder,
+                pathRef,
+                outputPath,
+                outputFile = outputFile
+            )
+        outputFile.close()
     # WordAlignerCompare()
     

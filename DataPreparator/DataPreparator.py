@@ -23,10 +23,10 @@ filenamesLV = [
 ]
 
 variant = {
-    '.tilde.SimAlign.srt':'TildeSimAlign/',
-    '.tilde.tilde.srt':'TildeTilde/',
-    '.srt':'TildeDocument/',
-    '.tilde.Sentences.srt':'TildeSentences/',
+    '.tilde.SimAlign.srt':'SimAlign/',
+    '.tilde.tilde.srt':'Tilde/',
+    '.tilde.docuemnt.srt':'Document/',
+    '.tilde.Sentences.srt':'Sentences/',
 }
 
 def GetNormalizedText(caption: Caption):
@@ -130,6 +130,45 @@ def WriteToFile(path,file,subtitles):
     f = open(output, mode='w', encoding='utf-8-sig')
     f.write(srt.compose(subtitles))
     f.close()
+
+def MainPreparator(
+    sourceFile,
+    targetFile,
+    needTargetNormalize,
+    sourceLang = 'en',
+    targetLang = 'lv',
+    pathInput = 'SubtitleParser/Subtitles/',
+    pathOutput = 'DataPreparator/Result/',
+    subtitleFormat = 'srt'
+):
+    SourceNLP = stanza.Pipeline(lang=sourceLang, processors='tokenize,pos,lemma,depparse', use_gpu=True)
+    TargetNLP = stanza.Pipeline(lang=targetLang, processors='tokenize,pos,lemma,depparse', use_gpu=True)
+
+    sourceInput = pathInput+sourceFile+'.'+subtitleFormat
+    targetInput = pathInput+targetFile+'.'+subtitleFormat
+    
+    f = open(sourceInput, encoding='utf-8-sig')
+    subtitlesSource = list(srt.parse(f.read()))
+    f.close()
+    
+    f = open(targetInput, encoding='utf-8-sig')
+    subtitlesTarget = list(srt.parse(f.read()))
+    f.close()
+
+    subtitlesSource = Normalize(subtitlesSource,SourceNLP)
+    if needTargetNormalize:
+        subtitlesTarget = Normalize(subtitlesTarget,TargetNLP)
+
+    subtitlesSource, subtitlesTarget = GetParalelSubtitles(subtitlesSource,subtitlesTarget)
+
+    print(folder,filenamesEN[x])
+    
+    CheckSubtitleSpeakerEquality(subtitlesSource, subtitlesTarget)
+
+    WriteToFile(pathOutput,sourceFile+'.'+subtitleFormat,subtitlesSource)
+    if needTargetNormalize:
+        WriteToFile(pathOutput,targetFile+'.'+subtitleFormat,subtitlesTarget)
+
 
 if __name__ == "__main__":
     nlpEN = stanza.Pipeline(lang='en', processors='tokenize,pos,lemma,depparse', use_gpu=True)

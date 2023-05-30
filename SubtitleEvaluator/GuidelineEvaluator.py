@@ -8,18 +8,18 @@ from SubtitleParser.SubtitleGuidelineMetrics import SubtitleGuidelineMetrics
 import math
 
 files = [
-    'City.on.Fire.S01E03.1080p.WEB.H264-GGWP.',
-    'Schmigadoon.S02E06.720p.WEBRip.2CH.x265.HEVC-PSA.English [SDH].ENG.',
-    'silo.s01e03.720p.web.h264-ggez.English [SDH].ENG.',
-    'Ted.Lasso.S03E08.720p.10bit.WEBRip.2CH.x265.HEVC-PSA_ENG.',
-    'The.Big.Door.Prize.S01E09.WEB.x264-TORRENTGALAXY.English [SDH].ENG.',
+    'City.on.Fire.S01E03.1080p.WEB.H264-GGWP',
+    'Schmigadoon.S02E06.720p.WEBRip.2CH.x265.HEVC-PSA.English [SDH].ENG',
+    'silo.s01e03.720p.web.h264-ggez.English [SDH].ENG',
+    'Ted.Lasso.S03E08.720p.10bit.WEBRip.2CH.x265.HEVC-PSA_ENG',
+    'The.Big.Door.Prize.S01E09.WEB.x264-TORRENTGALAXY.English [SDH].ENG',
 ]
 
 variant = {
-    'tilde.SimAlign.srt':'TildeSimAlign\\',
-    'tilde.tilde.srt':'TildeTilde\\',
-    'srt':'TildeDocument\\',
-    'tilde.Sentences.srt':'TildeSentences\\',
+    'tilde.SimAlign':'SimAlign\\',
+    'tilde.tilde':'Tilde\\',
+    'tilde.document':'Document\\',
+    'tilde.Sentences':'Sentences\\',
 }
 
 class Measure():
@@ -128,9 +128,6 @@ class Evaluator():
         self.subtitleReader = subtitleReader
 
     def Execute(self,sourceFile,targetFile,resultFile):
-        # print(sourceFile)
-        # print(targetFile)
-        # print('–-----------------------------------------------')
         f = open(sourceFile, encoding='utf-8-sig')
         source: list[srt.Subtitle] = list(self.subtitleReader(f.read()))
         f.close()     
@@ -155,25 +152,56 @@ class Evaluator():
         else:
             print('Amount of subtitles between source and target must be equal.')
 
+def MainGuideline(
+        hypFilename,
+        refFilename,
+        sourceGuidelines,
+        targetGuidelines,
+        pathHyp = 'SubtitleEvaluator/Hypotheses/',
+        pathRef = 'SubtitleEvaluator/References/',
+        outputPath = 'SubtitleEvaluator/GuidelineScores/',
+        subtitleFormat = 'srt',
+        outputFile = None
+    ):
+    evaluator = Evaluator(sourceGuidelines,targetGuidelines,srt.parse)
+
+    hypFile = pathHyp+hypFilename+'.'+subtitleFormat
+    refFile = pathRef+refFilename+'.'+subtitleFormat
+
+    if outputFile == None:
+        result = open(outputPath+hypFilename+'.txt', mode='w', encoding='utf-8-sig')
+        evaluator.Execute(refFile,hypFile,result)
+        result.close()
+    else:
+        evaluator.Execute(refFile,hypFile,outputFile)
+
+    
+
 if __name__ == "__main__":
-    reader = srt.parse
     sourceGuidelines = SubtitleGuidelineMetrics().GetPredefined('BBC_EN')
     targetGuidelines = SubtitleGuidelineMetrics().GetPredefined('BBC_LV')
 
-    evaluator = Evaluator(sourceGuidelines,targetGuidelines,reader)
-
-    pathHyp = sys.path[-1]+'DataPreparator\\TranslatedOriginal\\'
+    evaluator = Evaluator(sourceGuidelines,targetGuidelines,srt.parse)
+    
+    pathHyp = sys.path[-1]+'DataPreparator\\Translated\\'
     pathRef = sys.path[-1]+'DataPreparator\\Original\\'
+    
+    outputPath = sys.path[-1]+'SubtitleEvaluator\\GuidelineScores\\'
 
     for file in variant:
-        result = open(sys.path[-1]+'SubtitleEvaluator\\GuidelineScores\\'+file+'.txt', mode='w', encoding='utf-8-sig')
+        outputFile = open(outputPath+file+'.txt', mode='w', encoding='utf-8-sig')
         folder = variant[file]
         for x in range(5):
-            hypFile = pathHyp+folder+files[x]+file
-            refFile = pathRef+files[x]+'srt'
-
-            result.write(files[x]+'\n')
-
-            evaluator.Execute(refFile,hypFile,result)
-        result.close()
-
+            hypFilename = files[x]+'.'+file
+            refFilename = files[x]
+            MainGuideline(
+                hypFilename,
+                refFilename,
+                sourceGuidelines,
+                targetGuidelines,
+                pathHyp+folder,
+                pathRef,
+                outputPath,
+                outputFile = outputFile
+            )
+        outputFile.close()

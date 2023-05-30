@@ -1,4 +1,3 @@
-import stanza
 from typing import TypeVar
 import re
 
@@ -6,7 +5,6 @@ import sys, os
 sys.path.append(os.path.join(os.path.dirname(sys.path[0]),''))
 import SubtitleParser.Configurations.Constants as Constants
 from SubtitleParser.Configurations.Punctuations import *
-from SubtitleParser.Configurations.Tags import *
 from SubtitleParser.TaggedTextTokenizer import TaggedTextTokenizer, TaggedToken
 from SubtitleParser.SubtitleElementTokenizer import SubtitleElementTokenizer, SubtitleElement
 
@@ -345,14 +343,3 @@ class Caption():
     # Methot to check if caption has multiple wrapping symbol content groups.
     def HasWrappingSymbols(self):
         return len(self.GetWrappingSymbols()) > 0
-
-if __name__ == "__main__":
-    nlp = stanza.Pipeline(lang='en', processors='tokenize,pos,lemma,depparse')
-    text = '<font color="#FFFFFF"># ARTIS: <i> Viņš iet uz "2. posmu"...\n<b>..nevēlējās</b> <u>izgāzties</u>. </i>#</font>'
-    text = 'ROB: ♪ Oh-oh-oh ♪♪ Who... ♪'
-    # text = '{\\an5\\t(0,5000,\\frz3600)}Sentence is aligned.'
-    # text = '………sentence is aligned………………'
-    test1 = Caption().NewCaption(text,0,nlp)
-    # for p in test1.parts:
-    #     print(p.id,p.value,p.subType)
-

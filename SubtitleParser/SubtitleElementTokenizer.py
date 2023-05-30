@@ -1,13 +1,11 @@
-import stanza
 from typing import TypeVar
 import re
 
 import sys, os
 sys.path.append(os.path.join(os.path.dirname(sys.path[0]),''))
 from SubtitleParser.Configurations.Punctuations import *
-from SubtitleParser.Configurations.Tags import *
 from SubtitleParser.Configurations import Constants
-from SubtitleParser.TaggedTextTokenizer import TaggedToken, TaggedTextTokenizer
+from SubtitleParser.TaggedTextTokenizer import TaggedToken
 
 SubtitleElementType = TypeVar("SubtitleElementType", bound="SubtitleElement")
 
@@ -318,19 +316,3 @@ class SubtitleElementTokenizer():
         if re.match(r'(♪+)',value):
             return True
         return False
-
-if __name__ == '__main__':
-    nlp = stanza.Pipeline(lang='en', processors='tokenize,pos,lemma,depparse', download_method=None)
-    # texten = "- Valence's comms data?\n<i>- <u>XANDER<b>:</b></u> His # password #</i>"
-    # textlv = "- Valences sakaru dati<b>?</b>\n<i>- <u>KSENDERS<b>:</b></u> Viņa # parole #2.</i>"
-    # test = '[punch] [hit] [kick]'
-    texten = "Mr. Blight , what are you-- I need an orphan! Now!"
-
-    tokens = TaggedTextTokenizer(texten,nlp)
-    result = []
-    for word in tokens.tokens:
-        result.append(word.value)
-    print(result)
-    subtitle = SubtitleElementTokenizer(tokens.tokens,1)
-    for part in subtitle.parts:
-        print(part.id,part.value,part.subType)

@@ -1,10 +1,7 @@
 import sys, os
 sys.path.append(os.path.join(os.path.dirname(sys.path[0]),''))
-from SubtitleParser.Configurations.Punctuations import wrappingSymbols, wrapping, punctuations, ellipses
-from SubtitleParser.Configurations.Tags import *
 from SubtitleParser.CustomTokenizer import CustomToken
 import SubtitleParser.Configurations.Constants as Constants
-import stanza
 import re
 from SubtitleParser.TaggedTextTokenizer import TaggedToken
 from SubtitleParser.SubtitleElementTokenizer import SubtitleElement
@@ -190,17 +187,3 @@ class SentenceMetadataFunctions():
         if len(sentenceEnds) > 0:
             return (result,ends)
         return result
-    
-if __name__ == "__main__":
-    nlp = stanza.Pipeline(lang='en', processors='tokenize,pos,lemma,depparse', use_gpu=True)
-    # text = '    <font color="#FFFFFF">    {\\an8}    #$&%@ ARTIS:<i> <a href="web"> Viņš iet {\\an8}uz "2. posmu",</a>\nROBS: jo <b>nevēlējās</b> <u>izgāzties</u>. @%&$#</i></font>'
-    # text = "♪ Oh-oh-oh ♪♪ Who... ♪"
-    text = 'Do you...? Do you really-- ..want ...to come...!!!'
-    # text = 'Vai es...varu dejot...?'
-    test1 = SentenceMetadataFunctions(text,nlp)
-    
-    # for sentence in test1.GetSentenceMetadata().items():
-    #     print(sentence[0],sentence[1])
-    print(test1.Sentences())
-    for token in test1.tokens:
-        print(token.id,token.start,token.end,token.value,token.upos)

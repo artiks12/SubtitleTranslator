@@ -1,13 +1,7 @@
 import sys, os
 sys.path.append(os.path.join(os.path.dirname(sys.path[0]),''))
-from SubtitleParser.Sentences import Sentences
-from SubtitleParser.Caption import Caption
-from SubtitleParser.SubtitleElementTokenizer import SubtitleElement
 import SubtitleParser.Configurations.Constants as Constants
-import SubtitleParser.Translator as Translator
-from SubtitleParser.SentenceMetadataFunctions import SentenceMetadataFunctions
-from SubtitleParser.CustomTokenizer import CustomTokenizer
-from SubtitleParser.TaggedTextTokenizer import TaggedToken, TaggedTextTokenizer
+from SubtitleParser.TaggedTextTokenizer import TaggedTextTokenizer
 from SubtitleParser.SyntacticChunker import GetSyntachticChunksAsStrings
 from SubtitleParser.SubtitleGuidelineMetrics import SubtitleGuidelineMetrics
 import re
@@ -206,8 +200,6 @@ class TextBreaker():
                 if not(last == next):
                     spaces = ' ' * (next-last)
                     right = spaces + right
-
-            # print(left,texts[t],right)
 
             result[t] = self.GetTextLinesForSubtitle(left,texts[t],right,taggedTokenizer,caption,hasSpaces)
 

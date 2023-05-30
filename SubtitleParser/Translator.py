@@ -57,4 +57,3 @@ def BatchTranslator(metadata,SourceNLP,TargetNLP,translator) -> dict:
         startSource += len(sentence) + 1
         startTarget += len(alignmentData['translation']) + 1
     return metadata
-

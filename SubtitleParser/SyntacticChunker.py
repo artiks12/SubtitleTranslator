@@ -1,8 +1,7 @@
 import sys, os
 sys.path.append(os.path.join(os.path.dirname(sys.path[0]),''))
-from SubtitleParser.TaggedTextTokenizer import TaggedTextTokenizer, TaggedToken
+from SubtitleParser.TaggedTextTokenizer import TaggedToken
 from SubtitleParser.Configurations.Punctuations import closings
-import stanza
 
 OpenPOS = ['ADJ','ADV','INTJ','NOUN','PROPN','VERB']
 ClosedPOS = ['ADP','AUX','CCONJ','DET','NUM','PART','PRON','SCONJ']
@@ -67,25 +66,3 @@ def GetSyntachticChunksAsStrings(
     if len(temp) > 0:
         result.append(temp)
     return result
-
-if __name__ == "__main__":
-    # nlp = stanza.Pipeline(lang='en', processors='tokenize,pos,lemma,depparse,mwt,constituency', use_gpu=True)
-    # text = 'To answer to him that she sleeps.'
-    
-    nlp = stanza.Pipeline(lang='lv', processors='tokenize,pos,lemma,depparse', use_gpu=True)
-    # text = 'Tas ir, izjokot šos puišus ir bijis viens no mūsu draudzības pamatā esošajiem pamudinājumiem.'
-    # text = 'Līgo nakts zaļumballē ar tautā iemīlētām un populārām dziesmām līgotājus priecēs Andris Baltacis un grupa “Baltie lāči”.'
-    # text = '"And along with that is the <b>importance</b> of stronger national security.'
-    text = 'Otrā runātāja turpinājums tepat.'
-
-    # nlp = stanza.Pipeline(lang='ja', processors='tokenize,pos,lemma,depparse', use_gpu=True)
-    # text = 'その犬はサッカーをしています。'
-    
-    test1 = TaggedTextTokenizer(text,nlp,True)
-
-    for token in test1.tokens:
-        print(token.id,token.start,token.end,token.value,token.upos)
-
-    chunks = GetSyntachticChunksAsStrings(test1.tokens,False)
-    for chunk in chunks:
-        print(chunk)

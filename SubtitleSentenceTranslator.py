@@ -90,6 +90,28 @@ class SubtitleSentenceTranslator():
 
         print('Process finished at',datetime.now())
 
+def MainSentences(
+    filename,
+    subtitlingGuidelines,
+    translator,
+    sourceLang = 'en',
+    targetLang = 'lv',
+    pathInput = 'SubtitleParser/Subtitles/',
+    pathOutput = 'SubtitleParser/Result/',
+    subtitleFormat = 'srt',
+):
+    SourceNLP = stanza.Pipeline(lang=sourceLang, processors='tokenize,pos,lemma,depparse', use_gpu=True)
+    TargetNLP = stanza.Pipeline(lang=targetLang, processors='tokenize,pos,lemma,depparse', use_gpu=True)
+    reader = srt.parse
+    writter = srt.compose
+
+    MainSystem = SubtitleSentenceTranslator(SourceNLP,TargetNLP,subtitlingGuidelines,reader,writter,translator)
+
+    sourcefile = pathInput+filename+'.'+subtitleFormat
+    targetfile = pathOutput+filename+'.'+subtitleFormat
+    
+    MainSystem.Execute(sourcefile,targetfile)
+
 if __name__ == "__main__":
     SourceNLP = stanza.Pipeline(lang='en', processors='tokenize,pos,lemma,depparse', use_gpu=True)
     TargetNLP = stanza.Pipeline(lang='lv', processors='tokenize,pos,lemma,depparse', use_gpu=True)
