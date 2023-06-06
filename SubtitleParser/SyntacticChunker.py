@@ -53,7 +53,7 @@ def GetSyntachticChunksAsStrings(
                             result.append(temp)
                             temp = ''
                         # From BBC subtitling guidelines
-                        elif lastUpos in ['VERB','AUX'] and token.upos not in ['VERB','AUX'] + OtherPOS:
+                        elif lastUpos in ['VERB'] and token.upos not in ['VERB'] + OtherPOS:
                             result.append(temp)
                             temp = ''
                         elif lastUpos in OpenPOS and token.upos in OpenPOS:
@@ -66,3 +66,18 @@ def GetSyntachticChunksAsStrings(
     if len(temp) > 0:
         result.append(temp)
     return result
+
+if __name__ == "__main__":
+    import stanza
+    from TaggedTextTokenizer import TaggedTextTokenizer
+    SourceNLP = stanza.Pipeline(lang='en', processors='tokenize,pos,lemma,depparse', use_gpu=True)
+
+    tokenizer = TaggedTextTokenizer('This funny looking clown will have been doing exercise.',SourceNLP,True)
+
+    chunks = GetSyntachticChunksAsStrings(tokenizer.tokens,True)
+
+    for token in tokenizer.tokens:
+        print(token.id,token.value,token.dep,token.upos)
+
+    print(chunks)
+
